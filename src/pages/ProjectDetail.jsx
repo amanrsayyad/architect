@@ -28,6 +28,20 @@ const ProjectDetail = () => {
               nulla pariatur. Excepteur sint occaecat cupidatat non proident,
               sunt in culpa qui officia deserunt mollit anim id est laborum.
             </p>
+            <ul>
+              <li>
+                <h5>CLIENT :</h5>
+                <p>Qode Interactive</p>
+              </li>
+              <li>
+                <h5>ARCHITECT :</h5>
+                <p>FYX Architects</p>
+              </li>
+              <li>
+                <h5>LOCATION :</h5>
+                <p>Satara</p>
+              </li>
+            </ul>
           </ProjectCard>
         </ProjectGrid>
       </ProjectContainer>
@@ -39,6 +53,7 @@ export default ProjectDetail;
 
 const ProjectContainer = styled.div`
   margin-top: 5.9rem;
+  border-bottom: 1px solid #8e7861;
   .header {
     border-top: 1px solid #8e7861;
     border-bottom: 1px solid #8e7861;
@@ -70,7 +85,7 @@ const ProjectCard = styled.div`
   }
   h2 {
     color: #8e7861;
-    font-size: 60px;
+    font-size: 50px;
     line-height: 70px;
     font-weight: 500;
     letter-spacing: 0.06em;
@@ -85,5 +100,29 @@ const ProjectCard = styled.div`
     font-family: "Roboto3", sans-serif;
     line-height: 27px;
     letter-spacing: 0.7px;
+  }
+  ul {
+    margin-top: 3rem;
+    li {
+      display: flex;
+      align-items: center;
+      justify-content: flex-start;
+      margin-bottom: 1.5rem;
+
+      h5 {
+        color: #8e7861;
+        font-size: 16px;
+        line-height: 1.2em;
+        font-weight: 600;
+        letter-spacing: 0.3em;
+        font-family: "Khand1";
+        text-transform: uppercase;
+      }
+      p {
+        margin-top: -0.2rem;
+        line-height: 0px !important;
+        margin-left: 0.5rem;
+      }
+    }
   }
 `;
