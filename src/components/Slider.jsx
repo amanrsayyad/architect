@@ -57,29 +57,18 @@ const Slider = () => {
         </li>
       </ul>
       {/* ref={emblaRef} */}
-      <div className="embla">
-        <div className="embla__container">
-          <div className="embla__slide">
-            <img src={Slider7} alt="" />
-          </div>
-          <div className="embla__slide">
-            <img src={Slider2} alt="" />
-          </div>
-          <div className="embla__slide">
-            <img src={Slider3} alt="" />
-          </div>
-          <div className="embla__slide">
-            <img src={Slider6} alt="" />
-          </div>
-          <div className="embla__slide">
-            <img src={Slider8} alt="" />
-          </div>
-          <div className="embla__slide">
-            <img src={Slider9} alt="" />
-          </div>
-          <div className="embla__slide">
-            <img src={Slider1} alt="" />
-          </div>
+      <div className="slider_container">
+        <div className="embla__slide">
+          <img src={Slider7} alt="" />
+          <Data>
+            <h1>experiences & knowledge integrated</h1>
+            <p>
+              Lorem ipsum dolor sit amet consectetur, adipisicing elit.
+              Delectus, perspiciatis explicabo? Ipsa assumenda nulla molestias
+              delectus nisi placeat!
+            </p>
+          </Data>
+          <Overlay></Overlay>
         </div>
       </div>
       <div className="overlay"></div>
@@ -92,7 +81,6 @@ export default Slider;
 const SliderContainer = styled.div`
   position: relative;
   background-color: transparent;
-  /* z-index: 100000000; */
 
   .logo {
     position: absolute;
@@ -101,6 +89,7 @@ const SliderContainer = styled.div`
     background-color: transparent;
     width: 200px;
     height: 80px;
+    z-index: 100;
   }
   .border {
     position: absolute;
@@ -109,12 +98,13 @@ const SliderContainer = styled.div`
     background-color: #fff;
     height: 1px;
     width: 82%;
+    z-index: 100;
   }
   .nav_list {
     position: absolute;
     right: 3%;
     top: 18%;
-    z-index: 1000000000;
+    z-index: 100;
     text-align: right;
     background-color: transparent;
 
@@ -188,14 +178,46 @@ const SliderContainer = styled.div`
       }
     }
   }
+`;
 
-  .overlay {
-    position: absolute;
-    top: 0%;
-    left: 0%;
-    width: 100%;
-    height: 100vh;
-    background-color: rgba(0, 0, 0, 0.2);
-    z-index: 100000000;
+const Data = styled.div`
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  left: 7%;
+  background-color: transparent;
+  z-index: 100;
+
+  h1 {
+    width: 37%;
+    color: #fff;
+    background-color: transparent;
+    font-size: 70px;
+    line-height: 70px;
+    font-weight: 500;
+    letter-spacing: 0.06em;
+    margin-bottom: 11px;
+    font-family: "Khand1";
+    text-transform: uppercase;
   }
+  p {
+    background-color: transparent;
+    color: #d7d4d4;
+    width: 45%;
+    margin-bottom: 1.4rem;
+    font-weight: 500;
+    font-size: 18px;
+    font-family: "Roboto3", sans-serif;
+    line-height: 27px;
+  }
+`;
+
+const Overlay = styled.div`
+  position: absolute;
+  top: 0%;
+  left: 0%;
+  width: 100%;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 10;
 `;
