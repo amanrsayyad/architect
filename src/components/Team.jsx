@@ -90,6 +90,10 @@ const TeamGrid = styled.div`
   display: grid;
   grid-template-columns: 1fr 1fr;
   grid-gap: 1rem;
+
+  @media only screen and (max-width: 991px) {
+    grid-template-columns: 1fr;
+  }
 `;
 
 const TeamBg = styled.div`
@@ -103,6 +107,10 @@ const TeamCard = styled.div`
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   grid-gap: 1rem;
+
+  @media only screen and (max-width: 991px) {
+    grid-template-columns: 1fr;
+  }
 
   .card {
     img {
@@ -128,6 +136,10 @@ const TeamCard = styled.div`
       font-size: 18px !important;
       font-family: "Roboto3", sans-serif;
       line-height: 27px;
+
+      @media only screen and (max-width: 991px) {
+        margin-bottom: 0.5rem;
+      }
     }
     ul {
       display: flex;
@@ -159,6 +171,10 @@ const TeamCard = styled.div`
           background-color: #473c30;
           margin: 0 5px;
         }
+      }
+
+      @media only screen and (max-width: 991px) {
+        margin-bottom: 3rem;
       }
     }
   }

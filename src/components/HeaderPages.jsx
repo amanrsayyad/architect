@@ -121,6 +121,10 @@ const HeaderContainer = styled.div`
     display: flex;
     align-items: center;
     justify-content: center;
+
+    @media only screen and (max-width: 991px) {
+      display: none;
+    }
   }
 `;
 

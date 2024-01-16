@@ -72,6 +72,12 @@ const VidContainer = styled.div`
     font-size: 28px;
     background-color: transparent;
   }
+  @media only screen and (max-width: 991px) {
+    img {
+      height: 50vh;
+      object-fit: cover;
+    }
+  }
 `;
 
 const PopupContainer = styled.div`

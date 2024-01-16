@@ -39,6 +39,10 @@ const CounterGrid = styled.div`
   grid-template-columns: repeat(4, 1fr);
   grid-gap: 2rem;
   background-color: transparent;
+
+  @media only screen and (max-width: 991px) {
+    grid-template-columns: 1fr;
+  }
 `;
 
 const CounterCard = styled.div`

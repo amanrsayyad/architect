@@ -74,6 +74,10 @@ const HeaderContainer = styled.div`
     padding: 15px;
     padding-right: 60px;
   }
+
+  @media only screen and (max-width: 991px) {
+    display: none;
+  }
 `;
 
 const HeaderFlex = styled.div`

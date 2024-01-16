@@ -6,7 +6,6 @@ import HeaderPages from "../components/HeaderPages";
 import Button from "../components/Button";
 
 const Contact = () => {
-  
   useEffect(() => {
     window.scrollTo(0, 0);
   }, []);
@@ -70,6 +69,11 @@ const ContactGrid = styled.div`
   grid-template-columns: 2fr 1fr;
   grid-gap: 1rem;
   padding: 100px 70px;
+
+  @media only screen and (max-width: 991px) {
+    grid-template-columns: 1fr;
+    padding: 70px 35px;
+  }
 `;
 
 const ContactForm = styled.div`
@@ -91,6 +95,10 @@ const ContactForm = styled.div`
     grid-template-columns: repeat(2, 1fr);
     grid-gap: 3rem;
     margin-top: 2rem;
+
+    @media only screen and (max-width: 991px) {
+      grid-template-columns: 1fr;
+    }
   }
   input {
     border: none;
@@ -123,6 +131,10 @@ const ContactForm = styled.div`
       color: #fff;
     }
   }
+
+  @media only screen and (max-width: 991px) {
+    padding: 0px 0px;
+  }
 `;
 
 const ContactInfo = styled.div`
@@ -134,6 +146,7 @@ const ContactInfo = styled.div`
     flex-direction: column;
     margin-bottom: 5rem;
     margin-left: 6rem;
+
     h4 {
       color: #8e7861;
       font-size: 30px;
@@ -162,5 +175,15 @@ const ContactInfo = styled.div`
         }
       }
     }
+
+    @media only screen and (max-width: 991px) {
+      margin-bottom: 0rem;
+      margin-left: 0rem;
+    }
+  }
+
+  @media only screen and (max-width: 991px) {
+    padding-top: 50px;
+    padding-bottom: 0px;
   }
 `;

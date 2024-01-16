@@ -7,18 +7,19 @@ import forest1 from "../assets/Images/forest-project/forest1.jpg";
 import vita1 from "../assets/Images/vita-project/vita1.jpg";
 import park1 from "../assets/Images/part-project/park1.jpg";
 import rb1 from "../assets/Images/rb-project/rb1.jpg";
+import { Link } from "react-router-dom";
 
 const Projects = () => {
   return (
     <ProjectContainer>
-      <ProjectCard>
+      <ProjectCard to="/project-detail">
         <img src={babar1} alt="" />
         <div className="text">
           Babar Chowk, Satara <HiArrowLongRight className="iconArrow" />
         </div>
         <span className="number">01</span>
       </ProjectCard>
-      <ProjectCard className="border-right">
+      <ProjectCard to="/project-detail" className="border-right">
         <img src={db1} alt="" />
         <div className="text">
           DB Residence, bawada, Indapur{" "}
@@ -26,28 +27,28 @@ const Projects = () => {
         </div>
         <span className="number">02</span>
       </ProjectCard>
-      <ProjectCard>
+      <ProjectCard to="/project-detail">
         <img src={forest1} alt="" />
         <div className="text">
           Forest Colony, Satara <HiArrowLongRight className="iconArrow" />
         </div>
         <span className="number">03</span>
       </ProjectCard>
-      <ProjectCard className="border-right">
+      <ProjectCard to="/project-detail" className="border-right">
         <img src={vita1} alt="" />
         <div className="text">
           Mai's Kitchen, Vita <HiArrowLongRight className="iconArrow" />
         </div>
         <span className="number">04</span>
       </ProjectCard>
-      <ProjectCard>
+      <ProjectCard to="/project-detail">
         <img src={park1} alt="" />
         <div className="text">
           Nana-Nani Park, Satara <HiArrowLongRight className="iconArrow" />
         </div>
         <span className="number">05</span>
       </ProjectCard>
-      <ProjectCard className="border-right">
+      <ProjectCard to="/project-detail" className="border-right">
         <img src={rb1} alt="" />
         <div className="text">
           RB Residence, Kolewadi, Satara{" "}
@@ -68,9 +69,13 @@ const ProjectContainer = styled.div`
   .border-right {
     border-right: 1px solid #302e2c;
   }
+
+  @media only screen and (max-width: 991px) {
+    grid-template-columns: 1fr;
+  }
 `;
 
-const ProjectCard = styled.div`
+const ProjectCard = styled(Link)`
   position: relative;
   border-bottom: 1px solid #302e2c;
   border-left: 1px solid #302e2c;
@@ -108,6 +113,14 @@ const ProjectCard = styled.div`
     z-index: 1;
     background-color: transparent;
     font-family: "Heebo1";
+
+    @media only screen and (max-width: 991px) {
+      font-size: 120px;
+
+      &:nth-child(6) {
+        bottom: 30px;
+      }
+    }
   }
   .text {
     position: absolute;
@@ -127,6 +140,15 @@ const ProjectCard = styled.div`
     .iconArrow {
       font-size: 30px;
       margin-left: 0.5rem;
+    }
+
+    @media only screen and (max-width: 991px) {
+      font-size: 17px;
+
+      .iconArrow {
+        font-size: 20px;
+        margin-left: 0.5rem;
+      }
     }
   }
 `;

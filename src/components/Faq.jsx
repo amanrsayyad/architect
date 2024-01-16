@@ -77,12 +77,20 @@ export default Faq;
 
 const FaqContainer = styled.div`
   padding: 130px 100px;
+
+  @media only screen and (max-width: 991px) {
+    padding: 100px 30px;
+  }
 `;
 
 const FaqGrid = styled.div`
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   grid-gap: 2rem;
+
+  @media only screen and (max-width: 991px) {
+    grid-template-columns: 1fr;
+  }
 `;
 
 const FaqCard = styled.div`

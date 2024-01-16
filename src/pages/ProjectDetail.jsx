@@ -1,9 +1,14 @@
-import React from "react";
+import React, { useEffect } from "react";
 import styled from "styled-components";
 import HeaderPages from "../components/HeaderPages";
 import { babar1, babar2, babar3 } from "../utils/Images";
 
 const ProjectDetail = () => {
+
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
+
   return (
     <>
       <HeaderPages active3="active" />

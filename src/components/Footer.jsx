@@ -105,6 +105,13 @@ const FooterGrid = styled.div`
   padding-right: 110px;
   padding-top: 189px;
   padding-bottom: 187px;
+
+  @media only screen and (max-width: 991px) {
+    grid-template-columns: 1fr;
+    padding: 50px 0px;
+    padding-left: 20px;
+    padding-right: 20px;
+  }
 `;
 
 const FooterCard = styled.div`
@@ -223,6 +230,15 @@ const CopyFooter = styled.div`
     a {
       color: #ccc;
       margin: 0px 5px;
+    }
+  }
+
+  @media only screen and (max-width: 991px) {
+    justify-content: center;
+    flex-direction: column;
+
+    img {
+      margin-bottom: 0.5rem;
     }
   }
 `;

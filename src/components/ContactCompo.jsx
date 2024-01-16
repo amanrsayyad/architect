@@ -37,6 +37,11 @@ const ContactContainer = styled.div`
   grid-template-columns: repeat(2, 1fr);
   grid-gap: 3rem;
   padding: 100px 0px;
+
+  @media only screen and (max-width: 991px) {
+    grid-template-columns: 1fr;
+    grid-gap: 1rem;
+  }
 `;
 
 const ContactImg = styled.div`
@@ -64,6 +69,10 @@ const ContactForm = styled.div`
     grid-template-columns: repeat(2, 1fr);
     grid-gap: 3rem;
     margin-top: 2rem;
+
+    @media only screen and (max-width: 991px) {
+      grid-template-columns: 1fr;
+    }
   }
   input {
     border: none;
@@ -95,5 +104,10 @@ const ContactForm = styled.div`
     &::placeholder {
       color: #fff;
     }
+  }
+
+  @media only screen and (max-width: 991px) {
+    padding-right: 0px;
+    padding: 0px 20px;
   }
 `;

@@ -36,6 +36,10 @@ const AboutContainer = styled.div`
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   grid-gap: 3rem;
+
+  @media only screen and (max-width: 991px) {
+    grid-template-columns: 1fr;
+  }
 `;
 
 const AboutImg = styled.div`
@@ -63,5 +67,10 @@ const AboutCard = styled.div`
     width: 75%;
     margin-bottom: 1rem;
     font-weight: 400;
+  }
+
+  @media only screen and (max-width: 991px) {
+    padding-top: 100px;
+    padding-left: 30px;
   }
 `;

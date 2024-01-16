@@ -31,6 +31,10 @@ const ProjectGrid = styled.div`
   grid-template-columns: 2fr 1.5fr 1fr;
   grid-gap: 1rem;
   padding: 100px 15px;
+
+  @media only screen and (max-width: 991px) {
+    grid-template-columns: 1fr;
+  }
 `;
 
 const ProjectCard = styled.div`
@@ -38,6 +42,12 @@ const ProjectCard = styled.div`
     width: 100%;
     height: 600px;
     object-fit: cover;
+  }
+
+  @media only screen and (max-width: 991px) {
+    img {
+      height: 350px;
+    }
   }
 `;
 

@@ -59,6 +59,14 @@ const TestContainer = styled.div`
     font-size: 40px;
     cursor: pointer;
   }
+  @media only screen and (max-width: 991px) {
+    .iconLeft {
+      left: 7%;
+    }
+    .iconRight {
+      right: 7%;
+    }
+  }
 `;
 
 const TestBg = styled.div`
@@ -102,5 +110,12 @@ const TestDiv = styled.div`
     font-size: 16px !important;
     font-family: "Roboto3", sans-serif;
     line-height: 27px;
+  }
+
+  @media only screen and (max-width: 991px) {
+    h5 {
+      width: 100%;
+      font-size: 25px;
+    }
   }
 `;

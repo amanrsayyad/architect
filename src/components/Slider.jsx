@@ -19,6 +19,14 @@ const Slider = () => {
   return (
     <SliderContainer>
       <img src={logoWhite} alt="" className="logo" />
+      <MenuIcon>
+        <div className="seperator"></div>
+        <div className="seperator"></div>
+        <div className="seperator"></div>
+        <div className="seperator"></div>
+        <div className="seperator"></div>
+        <div className="seperator"></div>
+      </MenuIcon>
       <div className="border"></div>
       <ul className="nav_list">
         <li>
@@ -90,6 +98,12 @@ const SliderContainer = styled.div`
     width: 200px;
     height: 80px;
     z-index: 100;
+
+    @media only screen and (max-width: 991px) {
+      left: 2%;
+      width: 170px;
+      height: 75px;
+    }
   }
   .border {
     position: absolute;
@@ -99,6 +113,12 @@ const SliderContainer = styled.div`
     height: 1px;
     width: 82%;
     z-index: 100;
+
+    @media only screen and (max-width: 991px) {
+      top: 12.5%;
+      width: 100%;
+      right: 0%;
+    }
   }
   .nav_list {
     position: absolute;
@@ -136,6 +156,10 @@ const SliderContainer = styled.div`
           right: auto;
         }
       }
+    }
+
+    @media only screen and (max-width: 991px) {
+      display: none;
     }
   }
 
@@ -177,6 +201,28 @@ const SliderContainer = styled.div`
         margin: 0 5px;
       }
     }
+    @media only screen and (max-width: 991px) {
+      left: 8%;
+    }
+  }
+`;
+
+const MenuIcon = styled.div`
+  position: absolute;
+  top: 4.9%;
+  right: 2.5%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-left: 2rem;
+  cursor: pointer;
+  background-color: transparent;
+
+  .seperator {
+    width: 1px;
+    height: 27px;
+    background-color: #fff;
+    margin: 0px 4px;
   }
 `;
 
@@ -209,6 +255,16 @@ const Data = styled.div`
     font-size: 18px;
     font-family: "Roboto3", sans-serif;
     line-height: 27px;
+  }
+  @media only screen and (max-width: 991px) {
+    h1 {
+      font-size: 40px;
+      line-height: 45px;
+      width: 80%;
+    }
+    p {
+      width: 75%;
+    }
   }
 `;
 
