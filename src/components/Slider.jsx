@@ -1,4 +1,8 @@
-import React from "react";
+import React, { useRef, useState } from "react";
+import { Swiper, SwiperSlide } from "swiper/react";
+import "swiper/css";
+import "swiper/css/pagination";
+import { Pagination, EffectFade, Navigation } from "swiper/modules";
 import styled from "styled-components";
 import useEmblaCarousel from "embla-carousel-react";
 import Autoplay from "embla-carousel-autoplay";
@@ -65,8 +69,17 @@ const Slider = () => {
         </li>
       </ul>
       {/* ref={emblaRef} */}
-      <div className="slider_container">
-        <div className="embla__slide">
+      <Swiper
+        loop={true}
+        pagination={{
+          dynamicBullets: true,
+        }}
+        effect={"fade"}
+        navigation={true}
+        modules={[Pagination, EffectFade, Navigation]}
+        className="slider_container"
+      >
+        <SwiperSlide className="embla__slide">
           <img src={Slider7} alt="" />
           <Data>
             <h1>experiences & knowledge integrated</h1>
@@ -77,8 +90,97 @@ const Slider = () => {
             </p>
           </Data>
           <Overlay></Overlay>
+        </SwiperSlide>
+        <SwiperSlide className="embla__slide">
+          <img src={Slider1} alt="" />
+          <Data>
+            <h1>experiences & knowledge integrated</h1>
+            <p>
+              Lorem ipsum dolor sit amet consectetur, adipisicing elit.
+              Delectus, perspiciatis explicabo? Ipsa assumenda nulla molestias
+              delectus nisi placeat!
+            </p>
+          </Data>
+          <Overlay></Overlay>
+        </SwiperSlide>
+        <SwiperSlide className="embla__slide">
+          <img src={Slider2} alt="" />
+          <Data>
+            <h1>experiences & knowledge integrated</h1>
+            <p>
+              Lorem ipsum dolor sit amet consectetur, adipisicing elit.
+              Delectus, perspiciatis explicabo? Ipsa assumenda nulla molestias
+              delectus nisi placeat!
+            </p>
+          </Data>
+          <Overlay></Overlay>
+        </SwiperSlide>
+        <SwiperSlide className="embla__slide">
+          <img src={Slider3} alt="" />
+          <Data>
+            <h1>experiences & knowledge integrated</h1>
+            <p>
+              Lorem ipsum dolor sit amet consectetur, adipisicing elit.
+              Delectus, perspiciatis explicabo? Ipsa assumenda nulla molestias
+              delectus nisi placeat!
+            </p>
+          </Data>
+          <Overlay></Overlay>
+        </SwiperSlide>
+        <SwiperSlide className="embla__slide">
+          <img src={Slider6} alt="" />
+          <Data>
+            <h1>experiences & knowledge integrated</h1>
+            <p>
+              Lorem ipsum dolor sit amet consectetur, adipisicing elit.
+              Delectus, perspiciatis explicabo? Ipsa assumenda nulla molestias
+              delectus nisi placeat!
+            </p>
+          </Data>
+          <Overlay></Overlay>
+        </SwiperSlide>
+        <SwiperSlide className="embla__slide">
+          <img src={Slider7} alt="" />
+          <Data>
+            <h1>experiences & knowledge integrated</h1>
+            <p>
+              Lorem ipsum dolor sit amet consectetur, adipisicing elit.
+              Delectus, perspiciatis explicabo? Ipsa assumenda nulla molestias
+              delectus nisi placeat!
+            </p>
+          </Data>
+          <Overlay></Overlay>
+        </SwiperSlide>
+        <SwiperSlide className="embla__slide">
+          <img src={Slider8} alt="" />
+          <Data>
+            <h1>experiences & knowledge integrated</h1>
+            <p>
+              Lorem ipsum dolor sit amet consectetur, adipisicing elit.
+              Delectus, perspiciatis explicabo? Ipsa assumenda nulla molestias
+              delectus nisi placeat!
+            </p>
+          </Data>
+          <Overlay></Overlay>
+        </SwiperSlide>
+        <SwiperSlide className="embla__slide">
+          <img src={Slider9} alt="" />
+          <Data>
+            <h1>experiences & knowledge integrated</h1>
+            <p>
+              Lorem ipsum dolor sit amet consectetur, adipisicing elit.
+              Delectus, perspiciatis explicabo? Ipsa assumenda nulla molestias
+              delectus nisi placeat!
+            </p>
+          </Data>
+          <Overlay></Overlay>
+        </SwiperSlide>
+      </Swiper>
+      {/* <div className="slider_container">
+        <div className="embla__slide">
+          <img src={Slider7} alt="" />
         </div>
-      </div>
+      </div> */}
       <div className="overlay"></div>
     </SliderContainer>
   );
