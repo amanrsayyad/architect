@@ -6,21 +6,21 @@ const Counter = () => {
     <CounterContainer>
       <CounterGrid>
         <CounterCard>
-          <span>55 +</span>
-          <p>realized projects</p>
+          <span>100 +</span>
+          <p>Clients</p>
         </CounterCard>
         <CounterCard>
-          <span>37</span>
-          <p>company clients</p>
+          <span>10 +</span>
+          <p>Citys</p>
         </CounterCard>
         <CounterCard>
-          <span>22</span>
-          <p>square arears</p>
+          <span>100000+</span>
+          <p>Square Feets</p>
         </CounterCard>
-        <CounterCard>
+        {/* <CounterCard>
           <span>45</span>
           <p>world awards</p>
-        </CounterCard>
+        </CounterCard> */}
       </CounterGrid>
     </CounterContainer>
   );
@@ -36,7 +36,7 @@ const CounterContainer = styled.div`
 
 const CounterGrid = styled.div`
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
+  grid-template-columns: repeat(3, 1fr);
   grid-gap: 2rem;
   background-color: transparent;
 
@@ -57,7 +57,7 @@ const CounterCard = styled.div`
     left: 50%;
     transform: translate(-50%, -50%);
     font-family: "Roboto3", sans-serif;
-    font-size: 11px;
+    font-size: 13px;
     line-height: 18px;
     font-weight: 700;
     letter-spacing: 0.4em;

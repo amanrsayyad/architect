@@ -1,31 +1,37 @@
-import React from "react";
+import React, { useState } from "react";
 import styled from "styled-components";
 import testBg from "../assets/Images/testBg.png";
-import { Swiper, SwiperSlide } from "swiper/react";
 import { HiArrowLongRight, HiArrowLongLeft } from "../utils/Icons";
-
-// Import Swiper styles
-import "swiper/css";
-import "swiper/css/navigation";
-
-import { Navigation } from "swiper/modules";
+import People from "../utils/Data";
 
 const Test = () => {
+  const [state, setState] = useState(0);
+  const { id, name, title, quote } = People[state];
+
+  const Next = () => {
+    setState((state + 1) % People.length);
+  };
+  const Prev = () => {
+    const newState = state - 1;
+    if (newState < 0) {
+      setState(People.length - 1);
+    } else {
+      setState(state - 1);
+    }
+  };
+
   return (
     <TestContainer>
       <TestBg></TestBg>
-      <HiArrowLongLeft className="iconLeft" />
-      <HiArrowLongRight className="iconRight" />
-      <TestDiv>
-        <h5>
-          "LOREM IPSUM DOLOR SIT AMET LUCTUS SED DO EIUSMOD TEMP NEC ULLAM CONSE
-          CTETUR ADIPISCING ELITSE."
-          {/* Investor, Robert Green "SED DO EIUSMOD TEMP
-          NEC ULLAM CONSE CTETUR ADIPISCING OREM IPSUM DOLOR SIT AMET LUCTUS
-          ELITSE." Designer, Helena Mour "LOREM IPSUM DOLOR SIT AMET LUCTUS SED
-          DO EIUSMOD TEMP NEC ULLAM CONSE CTETUR ADIPISCING ELITSE." */}
-        </h5>
-        <p>Investor, Robert Green</p>
+      <HiArrowLongLeft className="iconLeft" onClick={Prev} />
+      <HiArrowLongRight className="iconRight" onClick={Next} />
+      <TestDiv key={id}>
+        <h5>"{quote}"</h5>
+        <p>
+          {name}
+        </p>
+        <p>{title}
+        </p>
       </TestDiv>
     </TestContainer>
   );
@@ -37,12 +43,17 @@ const TestContainer = styled.div`
   position: relative;
   background-color: transparent;
   width: 100%;
-  height: 60vh;
+  height: 70vh;
+  -webkit-user-select: none;
+  -webkit-touch-callout: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
 
   .iconLeft {
     position: absolute;
     top: 45%;
-    left: 20%;
+    left: 10%;
     transform: translateY(-50%);
     background-color: transparent;
     color: #8e7861;
@@ -52,7 +63,7 @@ const TestContainer = styled.div`
   .iconRight {
     position: absolute;
     top: 45%;
-    right: 20%;
+    right: 10%;
     transform: translateY(-50%);
     background-color: transparent;
     color: #8e7861;
@@ -81,7 +92,7 @@ const TestDiv = styled.div`
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  width: 65%;
+  width: 75%;
   height: 100%;
   display: flex;
   align-items: center;
