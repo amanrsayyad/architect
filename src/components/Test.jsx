@@ -72,10 +72,10 @@ const TestContainer = styled.div`
   }
   @media only screen and (max-width: 991px) {
     .iconLeft {
-      left: 7%;
+      left: 5%;
     }
     .iconRight {
-      right: 7%;
+      right: 5%;
     }
   }
 `;
@@ -125,8 +125,8 @@ const TestDiv = styled.div`
 
   @media only screen and (max-width: 991px) {
     h5 {
-      width: 100%;
-      font-size: 25px;
+      width: 85%;
+      font-size: 20px;
     }
   }
 `;

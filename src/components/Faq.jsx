@@ -104,6 +104,11 @@ const FaqCard = styled.div`
     font-family: "Khand1";
     text-transform: uppercase;
     width: 90%;
+
+    @media only screen and (max-width: 991px) {
+      width: 100%;
+      font-size: 47px;
+    }
   }
   p {
     color: #d7d4d4;
@@ -113,6 +118,10 @@ const FaqCard = styled.div`
     font-size: 19px;
     font-family: "Roboto3", sans-serif;
     line-height: 27px;
+
+    @media only screen and (max-width: 991px) {
+      width: 100%;
+    }
   }
   a {
     display: flex;

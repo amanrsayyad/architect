@@ -1,5 +1,6 @@
 import React from "react";
 import styled from "styled-components";
+import { FaInstagram, FaFacebookF, AiOutlineYoutube } from "../utils/Icons";
 import teamBg from "../assets/Images/teamBg.jpg";
 import team1 from "../assets/Images/team1.jpg";
 import team2 from "../assets/Images/team2.jpg";
@@ -22,7 +23,7 @@ const Team = () => {
                   href="https://www.instagram.com/fyxarchitects/"
                   target="_blank"
                 >
-                  ig
+                  <FaInstagram className="iconInsta" />
                 </a>
               </li>
               <li className="seprator-line">
@@ -30,7 +31,7 @@ const Team = () => {
                   href="https://www.facebook.com/FYXarchitects/"
                   target="_blank"
                 >
-                  fb
+                  <FaFacebookF className="iconFb" />
                 </a>
               </li>
               <li>
@@ -38,7 +39,7 @@ const Team = () => {
                   href="https://www.youtube.com/channel/UCzlAk6ojMkPcwf1JgYBSm7A"
                   target="_blank"
                 >
-                  yt
+                  <AiOutlineYoutube className="iconYt" />
                 </a>
               </li>
             </ul>
@@ -53,7 +54,7 @@ const Team = () => {
                   href="https://www.instagram.com/fyxarchitects/"
                   target="_blank"
                 >
-                  ig
+                  <FaInstagram className="iconInsta" />
                 </a>
               </li>
               <li className="seprator-line">
@@ -61,7 +62,7 @@ const Team = () => {
                   href="https://www.facebook.com/FYXarchitects/"
                   target="_blank"
                 >
-                  fb
+                  <FaFacebookF className="iconFb" />
                 </a>
               </li>
               <li>
@@ -69,7 +70,7 @@ const Team = () => {
                   href="https://www.youtube.com/channel/UCzlAk6ojMkPcwf1JgYBSm7A"
                   target="_blank"
                 >
-                  yt
+                  <AiOutlineYoutube className="iconYt" />
                 </a>
               </li>
             </ul>
@@ -145,7 +146,7 @@ const TeamCard = styled.div`
       display: flex;
       align-items: center;
       justify-content: space-between;
-      width: 40%;
+      width: 37%;
 
       li {
         display: flex;
@@ -153,13 +154,29 @@ const TeamCard = styled.div`
         justify-content: center;
 
         a {
-          color: #8e7861;
           font-size: 16px;
           line-height: 1.2em;
           font-weight: 600;
-          letter-spacing: 0.3em;
           font-family: "Khand1";
           text-transform: uppercase;
+          background-color: transparent;
+          margin-bottom: -0.3rem;
+          color: #d7d4d4;
+
+          .iconInsta {
+            font-size: 20px;
+            margin-right: 5px;
+            color: #d7d4d4;
+          }
+          .iconYt {
+            font-size: 25px;
+            color: #d7d4d4;
+          }
+          .iconFb {
+            font-size: 20px;
+            margin-right: 5px;
+            color: #d7d4d4;
+          }
         }
       }
       .seprator-line {

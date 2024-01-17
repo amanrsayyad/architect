@@ -2,6 +2,7 @@ import React from "react";
 import styled from "styled-components";
 import logo from "../assets/Images/logo.png";
 import { Link } from "react-router-dom";
+import { FaInstagram, FaFacebookF, AiOutlineYoutube } from "../utils/Icons";
 
 const Footer = () => {
   return (
@@ -20,12 +21,12 @@ const Footer = () => {
                 href="https://www.instagram.com/fyxarchitects/"
                 target="_blank"
               >
-                ig
+                <FaInstagram className="iconInsta" />
               </a>
             </li>
             <li className="seprator-line">
               <a href="https://www.facebook.com/FYXarchitects/" target="_blank">
-                fb
+                <FaFacebookF className="iconInsta" />
               </a>
             </li>
             <li>
@@ -33,7 +34,7 @@ const Footer = () => {
                 href="https://www.youtube.com/channel/UCzlAk6ojMkPcwf1JgYBSm7A"
                 target="_blank"
               >
-                yt
+                <AiOutlineYoutube className="iconYt" />
               </a>
             </li>
           </ul>
@@ -125,6 +126,10 @@ const FooterCard = styled.div`
     font-family: "Khand1";
     text-transform: uppercase;
     width: 60%;
+
+    @media only screen and (max-width: 991px) {
+      width: 80%;
+    }
   }
   p {
     color: #ccc;
@@ -134,6 +139,10 @@ const FooterCard = styled.div`
     margin-bottom: 14px;
     font-family: "Roboto3", sans-serif;
     line-height: 25px;
+
+    @media only screen and (max-width: 991px) {
+      width: 100%;
+    }
   }
   h5 {
     color: #8e7861;
@@ -176,6 +185,19 @@ const FooterCard = styled.div`
         letter-spacing: 0.3em;
         font-family: "Khand1";
         text-transform: uppercase;
+
+        .iconInsta {
+          font-size: 20px;
+          margin-right: 5px;
+        }
+        .iconYt {
+          font-size: 25px;
+          margin-left: 5px;
+        }
+        .iconFb {
+          font-size: 20px;
+          margin-right: 5px;
+        }
       }
     }
     .seprator-line {

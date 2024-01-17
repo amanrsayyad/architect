@@ -4,8 +4,6 @@ import "swiper/css";
 import "swiper/css/pagination";
 import { Pagination, EffectFade, Navigation } from "swiper/modules";
 import styled from "styled-components";
-import useEmblaCarousel from "embla-carousel-react";
-import Autoplay from "embla-carousel-autoplay";
 import logoWhite from "../assets/Images/logo-white.png";
 import Slider1 from "../assets/Images/Slider/Slider1.jpg";
 import Slider2 from "../assets/Images/Slider/Slider2.jpg";
@@ -15,11 +13,9 @@ import Slider7 from "../assets/Images/Slider/Slider7.jpg";
 import Slider8 from "../assets/Images/Slider/Slider8.jpg";
 import Slider9 from "../assets/Images/Slider/Slider9.jpg";
 import { Link } from "react-router-dom";
+import { FaInstagram, FaFacebookF, AiOutlineYoutube } from "../utils/Icons";
 
 const Slider = () => {
-  // { loop: true }, [Autoplay()]
-  const [emblaRef] = useEmblaCarousel();
-
   return (
     <SliderContainer>
       <img src={logoWhite} alt="" className="logo" />
@@ -51,12 +47,12 @@ const Slider = () => {
       <ul className="socail_list">
         <li className="seprator-line">
           <a href="https://www.instagram.com/fyxarchitects/" target="_blank">
-            ig
+            <FaInstagram className="iconInsta" />
           </a>
         </li>
         <li className="seprator-line">
           <a href="https://www.facebook.com/FYXarchitects/" target="_blank">
-            fb
+            <FaFacebookF className="iconFb" />
           </a>
         </li>
         <li>
@@ -64,7 +60,7 @@ const Slider = () => {
             href="https://www.youtube.com/channel/UCzlAk6ojMkPcwf1JgYBSm7A"
             target="_blank"
           >
-            yt
+            <AiOutlineYoutube className="iconYt" />
           </a>
         </li>
       </ul>
@@ -267,12 +263,12 @@ const SliderContainer = styled.div`
 
   .socail_list {
     position: absolute;
-    right: 3%;
+    right: 3.5%;
     bottom: 7%;
     display: flex;
     align-items: center;
     justify-content: space-between;
-    width: 8%;
+    width: 7%;
     z-index: 100;
     background-color: transparent;
 
@@ -287,10 +283,27 @@ const SliderContainer = styled.div`
         font-size: 16px;
         line-height: 1.2em;
         font-weight: 600;
-        letter-spacing: 0.3em;
+        /* letter-spacing: 0.3em; */
         font-family: "Khand1";
         text-transform: uppercase;
         background-color: transparent;
+        margin-bottom: -0.3rem;
+
+        .iconInsta {
+          font-size: 20px;
+          margin-right: 5px;
+          background-color: transparent;
+        }
+        .iconYt {
+          font-size: 25px;
+          margin-left: 5px;
+          background-color: transparent;
+        }
+        .iconFb {
+          font-size: 20px;
+          margin-right: 5px;
+          background-color: transparent;
+        }
       }
     }
     .seprator-line {

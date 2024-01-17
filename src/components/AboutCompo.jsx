@@ -72,5 +72,9 @@ const AboutCard = styled.div`
   @media only screen and (max-width: 991px) {
     padding-top: 100px;
     padding-left: 30px;
+
+    p {
+      width: ;
+    }
   }
 `;
