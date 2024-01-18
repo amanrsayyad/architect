@@ -68,13 +68,16 @@ a {
 }
 .embla {
   overflow: hidden;
+  background-color: transparent;
 }
 .embla__container {
   display: flex;
+  background-color: transparent;
 }
 .embla__slide {
   flex: 0 0 100%;
   min-width: 0;
+  background-color: transparent;
 }
 .embla__slide img {
   width: 100%;

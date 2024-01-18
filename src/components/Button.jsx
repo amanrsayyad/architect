@@ -17,4 +17,5 @@ const ButtonStyle = styled.button`
   font-weight: 600;
   letter-spacing: 0.1em;
   font-family: "Roboto2", sans-serif;
+  cursor: pointer;
 `;

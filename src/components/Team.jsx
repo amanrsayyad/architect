@@ -17,125 +17,21 @@ const Team = () => {
             <img src={team1} alt="" />
             <h5>VINCENT RASEL</h5>
             <p>CEO / Architect</p>
-            <ul>
-              <li className="seprator-line">
-                <a
-                  href="https://www.instagram.com/fyxarchitects/"
-                  target="_blank"
-                >
-                  <FaInstagram className="iconInsta" />
-                </a>
-              </li>
-              <li className="seprator-line">
-                <a
-                  href="https://www.facebook.com/FYXarchitects/"
-                  target="_blank"
-                >
-                  <FaFacebookF className="iconFb" />
-                </a>
-              </li>
-              <li>
-                <a
-                  href="https://www.youtube.com/channel/UCzlAk6ojMkPcwf1JgYBSm7A"
-                  target="_blank"
-                >
-                  <AiOutlineYoutube className="iconYt" />
-                </a>
-              </li>
-            </ul>
-          </div>
-          <div className="card">
-            <img src={team1} alt="" />
-            <h5>VINCENT RASEL</h5>
-            <p>CEO / Architect</p>
-            <ul>
-              <li className="seprator-line">
-                <a
-                  href="https://www.instagram.com/fyxarchitects/"
-                  target="_blank"
-                >
-                  <FaInstagram className="iconInsta" />
-                </a>
-              </li>
-              <li className="seprator-line">
-                <a
-                  href="https://www.facebook.com/FYXarchitects/"
-                  target="_blank"
-                >
-                  <FaFacebookF className="iconFb" />
-                </a>
-              </li>
-              <li>
-                <a
-                  href="https://www.youtube.com/channel/UCzlAk6ojMkPcwf1JgYBSm7A"
-                  target="_blank"
-                >
-                  <AiOutlineYoutube className="iconYt" />
-                </a>
-              </li>
-            </ul>
-          </div>
-          <div className="card">
-            <img src={team1} alt="" />
-            <h5>VINCENT RASEL</h5>
-            <p>CEO / Architect</p>
-            <ul>
-              <li className="seprator-line">
-                <a
-                  href="https://www.instagram.com/fyxarchitects/"
-                  target="_blank"
-                >
-                  <FaInstagram className="iconInsta" />
-                </a>
-              </li>
-              <li className="seprator-line">
-                <a
-                  href="https://www.facebook.com/FYXarchitects/"
-                  target="_blank"
-                >
-                  <FaFacebookF className="iconFb" />
-                </a>
-              </li>
-              <li>
-                <a
-                  href="https://www.youtube.com/channel/UCzlAk6ojMkPcwf1JgYBSm7A"
-                  target="_blank"
-                >
-                  <AiOutlineYoutube className="iconYt" />
-                </a>
-              </li>
-            </ul>
           </div>
           <div className="card">
             <img src={team2} alt="" />
             <h5>VICTORIA SAVANO</h5>
             <p>Urbanism and spatial planning</p>
-            <ul>
-              <li className="seprator-line">
-                <a
-                  href="https://www.instagram.com/fyxarchitects/"
-                  target="_blank"
-                >
-                  <FaInstagram className="iconInsta" />
-                </a>
-              </li>
-              <li className="seprator-line">
-                <a
-                  href="https://www.facebook.com/FYXarchitects/"
-                  target="_blank"
-                >
-                  <FaFacebookF className="iconFb" />
-                </a>
-              </li>
-              <li>
-                <a
-                  href="https://www.youtube.com/channel/UCzlAk6ojMkPcwf1JgYBSm7A"
-                  target="_blank"
-                >
-                  <AiOutlineYoutube className="iconYt" />
-                </a>
-              </li>
-            </ul>
+          </div>
+          <div className="card">
+            <img src={team1} alt="" />
+            <h5>VINCENT RASEL</h5>
+            <p>CEO / Architect</p>
+          </div>
+          <div className="card">
+            <img src={team2} alt="" />
+            <h5>VICTORIA SAVANO</h5>
+            <p>Urbanism and spatial planning</p>
           </div>
         </TeamCard>
       </TeamGrid>

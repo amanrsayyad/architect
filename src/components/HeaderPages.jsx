@@ -3,6 +3,7 @@ import styled from "styled-components";
 import logo from "../assets/Images/logo.png";
 import { Link } from "react-router-dom";
 import { TfiClose } from "../utils/Icons";
+import { FaInstagram, FaFacebookF, AiOutlineYoutube } from "../utils/Icons";
 
 const HeaderPages = (props) => {
   const [toggle, setToggle] = useState(false);
@@ -29,8 +30,8 @@ const HeaderPages = (props) => {
                 </li>
                 <div className="seperator"></div>
                 <li>
-                  <Link to="/projects" className={props.active3}>
-                    Projects
+                  <Link to="/portfolio" className={props.active3}>
+                    Portfolio
                   </Link>
                 </li>
                 <div className="seperator"></div>
@@ -62,12 +63,12 @@ const HeaderPages = (props) => {
                 href="https://www.instagram.com/fyxarchitects/"
                 target="_blank"
               >
-                ig
+                <FaInstagram className="iconInsta" />
               </a>
             </li>
             <li className="seprator-line">
               <a href="https://www.facebook.com/FYXarchitects/" target="_blank">
-                fb
+                <FaFacebookF className="iconFb" />
               </a>
             </li>
             <li>
@@ -75,7 +76,7 @@ const HeaderPages = (props) => {
                 href="https://www.youtube.com/channel/UCzlAk6ojMkPcwf1JgYBSm7A"
                 target="_blank"
               >
-                yt
+                <AiOutlineYoutube className="iconYt" />
               </a>
             </li>
           </ul>
@@ -240,13 +241,30 @@ const MenuContainter = styled.div`
       justify-content: center;
 
       a {
-        color: #8e7861;
-        font-size: 18px;
+        color: #fff;
+        font-size: 16px;
         line-height: 1.2em;
         font-weight: 600;
-        letter-spacing: 0.3em;
+        /* letter-spacing: 0.3em; */
         font-family: "Khand1";
         text-transform: uppercase;
+        background-color: transparent;
+        margin-bottom: -0.3rem;
+
+        .iconInsta {
+          font-size: 20px;
+          margin-right: 5px;
+          background-color: transparent;
+        }
+        .iconYt {
+          font-size: 25px;
+          margin-left: 5px;
+          background-color: transparent;
+        }
+        .iconFb {
+          font-size: 20px;
+          margin-right: 5px;
+        }
       }
     }
     .seprator-line {

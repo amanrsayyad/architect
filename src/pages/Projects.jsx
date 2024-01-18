@@ -19,62 +19,32 @@ const Projects = () => {
     <div>
       <HeaderPages active3="active" />
       <ProjectHead>
-        <h2>Projects</h2>
+        <h2>Portfolio</h2>
       </ProjectHead>
       <ProjectGrid>
         <ProjectCard to="/project-detail">
           <img src={babar1} alt="" />
           <h5>Babar Chowk, Satara</h5>
-          <p>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-            eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim
-            ad minim veniam, quis nostrud exercitation ullam
-          </p>
         </ProjectCard>
         <ProjectCard to="/project-detail">
           <img src={db1} alt="" />
           <h5>DB Residence, bawada, Indapur</h5>
-          <p>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-            eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim
-            ad minim veniam, quis nostrud exercitation ullam
-          </p>
         </ProjectCard>
         <ProjectCard to="/project-detail">
           <img src={forest1} alt="" />
           <h5>Forest Colony, Satara</h5>
-          <p>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-            eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim
-            ad minim veniam, quis nostrud exercitation ullam
-          </p>
         </ProjectCard>
         <ProjectCard to="/project-detail">
           <img src={vita1} alt="" />
           <h5>Mai's Kitchen, Vita</h5>
-          <p>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-            eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim
-            ad minim veniam, quis nostrud exercitation ullam
-          </p>
         </ProjectCard>
         <ProjectCard to="/project-detail">
           <img src={park1} alt="" />
           <h5>Nana-Nani Park, Satara</h5>
-          <p>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-            eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim
-            ad minim veniam, quis nostrud exercitation ullam
-          </p>
         </ProjectCard>
         <ProjectCard to="/project-detail">
           <img src={rb1} alt="" />
           <h5>RB Residence, Kolewadi, Satara</h5>
-          <p>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-            eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim
-            ad minim veniam, quis nostrud exercitation ullam
-          </p>
         </ProjectCard>
       </ProjectGrid>
     </div>

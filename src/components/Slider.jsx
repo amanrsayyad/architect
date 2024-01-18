@@ -38,7 +38,7 @@ const Slider = () => {
           <Link to="/about">About Us</Link>
         </li>
         <li>
-          <Link to="/projects">Projects</Link>
+          <Link to="/portfolio">Portfolio</Link>
         </li>
         <li>
           <Link to="/contact">Contact Us</Link>

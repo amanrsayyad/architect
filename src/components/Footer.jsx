@@ -58,19 +58,19 @@ const Footer = () => {
           </ul>
         </FooterCard>
         <FooterCard>
-          <h5>PROJECTS</h5>
+          <h5>Portfolio</h5>
           <ul>
             <li>
-              <Link to="#">Residential</Link>
+              <Link to="#">Architecture</Link>
             </li>
             <li>
               <Link to="#">Interior</Link>
             </li>
             <li>
-              <Link to="#">Competitions</Link>
+              <Link to="#">Landscape</Link>
             </li>
             <li>
-              <Link to="#">Reuse</Link>
+              <Link to="#">Visualisation</Link>
             </li>
           </ul>
         </FooterCard>

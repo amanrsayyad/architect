@@ -2,6 +2,7 @@ import React from "react";
 import styled from "styled-components";
 import aboutImg from "../assets/Images/aboutImg.png";
 import Button from "./Button";
+import { Link } from "react-router-dom";
 
 const AboutCompo = () => {
   return (
@@ -18,8 +19,10 @@ const AboutCompo = () => {
             Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut elit
             tellus, luctus nec ullamcorper mattis, pulvinar dapibus.
           </p>
-          <div style={{ marginTop: "3rem" }}>
-            <Button buttonName="explore" />
+          <div style={{ marginTop: "3rem", cursor: "pointer" }}>
+            <Link to="/about">
+              <Button buttonName="about us" />
+            </Link>
           </div>
         </AboutCard>
         <AboutImg>
@@ -72,9 +75,5 @@ const AboutCard = styled.div`
   @media only screen and (max-width: 991px) {
     padding-top: 100px;
     padding-left: 30px;
-
-    p {
-      width: ;
-    }
   }
 `;

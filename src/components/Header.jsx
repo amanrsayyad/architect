@@ -44,7 +44,7 @@ const Header = () => {
             </li>
             <div className="seperator"></div>
             <li>
-              <Link to="/projects">Projects</Link>
+              <Link to="/portfolio">Portfolio</Link>
             </li>
             <div className="seperator"></div>
             <li>

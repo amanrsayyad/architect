@@ -18,9 +18,6 @@ const Faq = () => {
             Duis aute irure dolor in reprehenderit in voluptate velit esse
             cillum dolore eu fugiat nulla pariatur cepteur sint occaecat.
           </p>
-          <Link to="#">
-            Read More <HiArrowLongRight className="iconArrow" />
-          </Link>
         </FaqCard>
         <FaqCard>
           <FaqDiv>

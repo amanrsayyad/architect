@@ -3,12 +3,14 @@ import styled from "styled-components";
 import vidImg from "../assets/Images/vidImg.jpg";
 import { FaPlay } from "react-icons/fa";
 import { TfiClose } from "react-icons/tfi";
+import Slider5 from "../assets/Images/Slider/Slider5.jpg";
 
 const Video = () => {
   const [popup, setPopup] = useState(false);
   return (
     <VidContainer>
-      <img src={vidImg} alt="" />
+      <img src={Slider5} alt="" />
+      <OverlayImg></OverlayImg>
       <div className="vid_icon" onClick={() => setPopup(!popup)}>
         <FaPlay className="icon" />
       </div>
@@ -100,4 +102,13 @@ const Overlay = styled.div`
   height: 100%;
   width: 100%;
   background-color: rgba(0, 0, 0, 0.8);
+`;
+
+const OverlayImg = styled.div`
+  position: absolute;
+  top: 0%;
+  left: 0%;
+  height: 100%;
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.4);
 `;
