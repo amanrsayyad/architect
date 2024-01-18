@@ -9,10 +9,72 @@ const Team = () => {
   return (
     <TeamContainer>
       <TeamGrid>
-        <TeamBg>
+        {/* <TeamBg>
           <img src={teamBg} alt="" />
-        </TeamBg>
+        </TeamBg> */}
         <TeamCard>
+          <div className="card">
+            <img src={team1} alt="" />
+            <h5>VINCENT RASEL</h5>
+            <p>CEO / Architect</p>
+            <ul>
+              <li className="seprator-line">
+                <a
+                  href="https://www.instagram.com/fyxarchitects/"
+                  target="_blank"
+                >
+                  <FaInstagram className="iconInsta" />
+                </a>
+              </li>
+              <li className="seprator-line">
+                <a
+                  href="https://www.facebook.com/FYXarchitects/"
+                  target="_blank"
+                >
+                  <FaFacebookF className="iconFb" />
+                </a>
+              </li>
+              <li>
+                <a
+                  href="https://www.youtube.com/channel/UCzlAk6ojMkPcwf1JgYBSm7A"
+                  target="_blank"
+                >
+                  <AiOutlineYoutube className="iconYt" />
+                </a>
+              </li>
+            </ul>
+          </div>
+          <div className="card">
+            <img src={team1} alt="" />
+            <h5>VINCENT RASEL</h5>
+            <p>CEO / Architect</p>
+            <ul>
+              <li className="seprator-line">
+                <a
+                  href="https://www.instagram.com/fyxarchitects/"
+                  target="_blank"
+                >
+                  <FaInstagram className="iconInsta" />
+                </a>
+              </li>
+              <li className="seprator-line">
+                <a
+                  href="https://www.facebook.com/FYXarchitects/"
+                  target="_blank"
+                >
+                  <FaFacebookF className="iconFb" />
+                </a>
+              </li>
+              <li>
+                <a
+                  href="https://www.youtube.com/channel/UCzlAk6ojMkPcwf1JgYBSm7A"
+                  target="_blank"
+                >
+                  <AiOutlineYoutube className="iconYt" />
+                </a>
+              </li>
+            </ul>
+          </div>
           <div className="card">
             <img src={team1} alt="" />
             <h5>VINCENT RASEL</h5>
@@ -89,7 +151,7 @@ const TeamContainer = styled.div`
 
 const TeamGrid = styled.div`
   display: grid;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: 1fr;
   grid-gap: 1rem;
 
   @media only screen and (max-width: 991px) {
@@ -106,7 +168,7 @@ const TeamBg = styled.div`
 
 const TeamCard = styled.div`
   display: grid;
-  grid-template-columns: repeat(2, 1fr);
+  grid-template-columns: repeat(4, 1fr);
   grid-gap: 1rem;
 
   @media only screen and (max-width: 991px) {
