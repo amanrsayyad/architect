@@ -1,12 +1,7 @@
 import React from "react";
 import styled from "styled-components";
 import { HiArrowLongRight } from "../utils/Icons";
-import babar1 from "../assets/Images/babar-chowk/babar1.jpg";
-import db1 from "../assets/Images/db-project/db1.jpg";
-import forest1 from "../assets/Images/forest-project/forest1.jpg";
-import vita1 from "../assets/Images/vita-project/vita1.jpg";
-import park1 from "../assets/Images/part-project/park1.jpg";
-import rb1 from "../assets/Images/rb-project/rb1.jpg";
+import { babar1, db1, forest1, vita1, rb1, park1 } from "../utils/Images";
 import { Link } from "react-router-dom";
 
 const Projects = () => {
@@ -85,13 +80,25 @@ const ProjectCard = styled(Link)`
   img {
     position: absolute;
     top: 0%;
-    left: 0%;
+    right: 0%;
     width: 0%;
     height: 0%;
     object-fit: cover;
     z-index: 100;
     display: none;
     transition: all 2s ease-in-out;
+    animation: run 5s 2;
+    animation-direction: alternate;
+    -webkit-animation: linear;
+    
+    @keyframes run {
+      0% {
+        right: 0%;
+      }
+      100% {
+        left: 100%;
+      }
+    }
   }
   &:hover {
     img {

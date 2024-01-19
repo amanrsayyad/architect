@@ -1,6 +1,9 @@
 import React, { useEffect } from "react";
 import styled from "styled-components";
 import HeaderPages from "../components/HeaderPages";
+import { Link } from "react-router-dom";
+import { HiArrowLongRight } from "../utils/Icons";
+import { babar1, db1, forest1, vita1, rb1 } from "../utils/Images";
 
 const Portfolio = () => {
   useEffect(() => {
@@ -12,7 +15,40 @@ const Portfolio = () => {
       <ProjectHead>
         <h2>Portfolio</h2>
       </ProjectHead>
-      <PortfolioContainer></PortfolioContainer>
+      <PortfolioContainer>
+        <PortfolioCard to="/project-detail" className="border-right">
+          <img src={babar1} alt="" />
+          <div className="text">
+            Architecture
+            <HiArrowLongRight className="iconArrow" />
+          </div>
+          <span className="number">01</span>
+        </PortfolioCard>
+        <PortfolioCard to="/project-detail" className="border-right">
+          <img src={db1} alt="" />
+          <div className="text">
+            Interior
+            <HiArrowLongRight className="iconArrow" />
+          </div>
+          <span className="number">02</span>
+        </PortfolioCard>
+        <PortfolioCard to="/project-detail" className="border-right">
+          <img src={forest1} alt="" />
+          <div className="text">
+            Landscape
+            <HiArrowLongRight className="iconArrow" />
+          </div>
+          <span className="number">03</span>
+        </PortfolioCard>
+        <PortfolioCard to="/project-detail" className="border-right">
+          <img src={rb1} alt="" />
+          <div className="text">
+            Visualisation
+            <HiArrowLongRight className="iconArrow" />
+          </div>
+          <span className="number">04</span>
+        </PortfolioCard>
+      </PortfolioContainer>
     </div>
   );
 };
@@ -36,4 +72,99 @@ const ProjectHead = styled.div`
   }
 `;
 
-const PortfolioContainer = styled.div``;
+const PortfolioContainer = styled.div`
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+
+  .border-right {
+    border-right: 1px solid #302e2c;
+  }
+
+  @media only screen and (max-width: 991px) {
+    grid-template-columns: 1fr;
+  }
+`;
+
+const PortfolioCard = styled(Link)`
+  position: relative;
+  border-bottom: 1px solid #302e2c;
+  border-left: 1px solid #302e2c;
+  padding: 110px;
+  z-index: 100;
+
+  position: relative;
+  border-bottom: 1px solid #302e2c;
+  border-left: 1px solid #302e2c;
+  padding: 110px;
+  z-index: 100;
+
+  img {
+    position: absolute;
+    top: 0%;
+    left: 0%;
+    width: 0%;
+    height: 0%;
+    object-fit: cover;
+    z-index: 100;
+    display: none;
+    transition: all 2s ease-in-out;
+  }
+  &:hover {
+    img {
+      width: 100%;
+      height: 100%;
+      display: block;
+      cursor: pointer;
+    }
+  }
+
+  .number {
+    position: absolute;
+    right: 25px;
+    bottom: -20px;
+    font-size: 100px;
+    font-weight: 100;
+    line-height: 1;
+    color: #211e19;
+    z-index: 1;
+    background-color: transparent;
+    font-family: "Heebo1";
+
+    @media only screen and (max-width: 991px) {
+      font-size: 120px;
+
+      &:nth-child(6) {
+        bottom: 30px;
+      }
+    }
+  }
+  .text {
+    position: absolute;
+    bottom: 17%;
+    left: 7%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #8e7861;
+    font-size: 20px;
+    line-height: 1.2em;
+    font-weight: 600;
+    letter-spacing: 0.1em;
+    font-family: "Khand4";
+    text-transform: uppercase;
+
+    .iconArrow {
+      font-size: 30px;
+      margin-left: 0.5rem;
+    }
+
+    @media only screen and (max-width: 991px) {
+      font-size: 17px;
+
+      .iconArrow {
+        font-size: 20px;
+        margin-left: 0.5rem;
+      }
+    }
+  }
+`;
