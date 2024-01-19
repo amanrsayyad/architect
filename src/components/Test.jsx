@@ -43,7 +43,7 @@ const TestContainer = styled.div`
   position: relative;
   background-color: transparent;
   width: 100%;
-  height: 70vh;
+  height: 50vh;
   -webkit-user-select: none;
   -webkit-touch-callout: none;
   -moz-user-select: none;
@@ -53,7 +53,7 @@ const TestContainer = styled.div`
   .iconLeft {
     position: absolute;
     top: 45%;
-    left: 10%;
+    left: 5%;
     transform: translateY(-50%);
     background-color: transparent;
     color: #8e7861;
@@ -63,7 +63,7 @@ const TestContainer = styled.div`
   .iconRight {
     position: absolute;
     top: 45%;
-    right: 10%;
+    right: 5%;
     transform: translateY(-50%);
     background-color: transparent;
     color: #8e7861;
@@ -92,7 +92,7 @@ const TestDiv = styled.div`
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  width: 75%;
+  width: 80%;
   height: 100%;
   display: flex;
   align-items: center;
@@ -102,9 +102,9 @@ const TestDiv = styled.div`
   background-color: transparent;
 
   h5 {
-    width: 60%;
+    width: 80%;
     font-family: "Khand4", sans-serif;
-    font-size: 40px;
+    font-size: 25px;
     font-weight: 600;
     line-height: 1em;
     letter-spacing: 0.1em;
