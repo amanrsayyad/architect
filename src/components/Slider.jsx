@@ -2,7 +2,8 @@ import React, { useRef, useState } from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
 import "swiper/css/pagination";
-import { Pagination, EffectFade, Navigation } from "swiper/modules";
+import "swiper/css/autoplay";
+import { Pagination, EffectFade, Navigation, Autoplay } from "swiper/modules";
 import styled from "styled-components";
 import logoWhite from "../assets/Images/logo-white.png";
 import Slider1 from "../assets/Images/Slider/Slider1.jpg";
@@ -64,15 +65,15 @@ const Slider = () => {
           </a>
         </li>
       </ul>
-      {/* ref={emblaRef} */}
       <Swiper
         loop={true}
+        navigation={true}
+        effect={"fade"}
+        autoplay={true}
+        modules={[Pagination, EffectFade, Navigation, Autoplay]}
         pagination={{
           dynamicBullets: true,
         }}
-        effect={"fade"}
-        navigation={true}
-        modules={[Pagination, EffectFade, Navigation]}
         className="slider_container"
       >
         <SwiperSlide className="embla__slide">

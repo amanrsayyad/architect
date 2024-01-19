@@ -19,7 +19,7 @@ const Portfolio = () => {
         <h2>Portfolio</h2>
       </ProjectHead>
       <PortfolioContainer>
-        <PortfolioCard to="/project-detail" className="border-right">
+        <PortfolioCard to="/projects" className="border-right">
           <img src={Slider6} alt="" />
           <div className="text">
             Architecture
@@ -27,7 +27,7 @@ const Portfolio = () => {
           </div>
           <span className="number">01</span>
         </PortfolioCard>
-        <PortfolioCard to="/project-detail" className="border-right">
+        <PortfolioCard to="/projects" className="border-right">
           <img src={Slider2} alt="" />
           <div className="text">
             Interior
@@ -35,7 +35,7 @@ const Portfolio = () => {
           </div>
           <span className="number">02</span>
         </PortfolioCard>
-        <PortfolioCard to="/project-detail" className="border-right">
+        <PortfolioCard to="/projects" className="border-right">
           <img src={Slider8} alt="" />
           <div className="text">
             Landscape
@@ -43,7 +43,7 @@ const Portfolio = () => {
           </div>
           <span className="number">03</span>
         </PortfolioCard>
-        <PortfolioCard to="/project-detail" className="border-right">
+        <PortfolioCard to="/projects" className="border-right">
           <img src={Slider9} alt="" />
           <div className="text">
             Visualisation

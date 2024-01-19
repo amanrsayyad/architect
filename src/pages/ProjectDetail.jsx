@@ -39,8 +39,8 @@ const ProjectDetail = () => {
                 <p>Qode Interactive</p>
               </li>
               <li>
-                <h5>ARCHITECT :</h5>
-                <p>FYX Architects</p>
+                <h5>AREA :</h5>
+                <p>400 Sq.Ft</p>
               </li>
               <li>
                 <h5>LOCATION :</h5>

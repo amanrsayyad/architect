@@ -19,7 +19,7 @@ const Projects = () => {
     <div>
       <HeaderPages active3="active" />
       <ProjectHead>
-        <h2>Portfolio</h2>
+        <h2>Projects</h2>
       </ProjectHead>
       <ProjectGrid>
         <ProjectCard to="/project-detail">
