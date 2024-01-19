@@ -3,7 +3,10 @@ import styled from "styled-components";
 import HeaderPages from "../components/HeaderPages";
 import { Link } from "react-router-dom";
 import { HiArrowLongRight } from "../utils/Icons";
-import { babar1, db1, forest1, vita1, rb1 } from "../utils/Images";
+import Slider2 from "../assets/Images/Slider/Slider2.jpg";
+import Slider6 from "../assets/Images/Slider/Slider6.jpg";
+import Slider8 from "../assets/Images/Slider/Slider8.jpg";
+import Slider9 from "../assets/Images/Slider/Slider9.jpg";
 
 const Portfolio = () => {
   useEffect(() => {
@@ -17,7 +20,7 @@ const Portfolio = () => {
       </ProjectHead>
       <PortfolioContainer>
         <PortfolioCard to="/project-detail" className="border-right">
-          <img src={babar1} alt="" />
+          <img src={Slider6} alt="" />
           <div className="text">
             Architecture
             <HiArrowLongRight className="iconArrow" />
@@ -25,7 +28,7 @@ const Portfolio = () => {
           <span className="number">01</span>
         </PortfolioCard>
         <PortfolioCard to="/project-detail" className="border-right">
-          <img src={db1} alt="" />
+          <img src={Slider2} alt="" />
           <div className="text">
             Interior
             <HiArrowLongRight className="iconArrow" />
@@ -33,7 +36,7 @@ const Portfolio = () => {
           <span className="number">02</span>
         </PortfolioCard>
         <PortfolioCard to="/project-detail" className="border-right">
-          <img src={forest1} alt="" />
+          <img src={Slider8} alt="" />
           <div className="text">
             Landscape
             <HiArrowLongRight className="iconArrow" />
@@ -41,7 +44,7 @@ const Portfolio = () => {
           <span className="number">03</span>
         </PortfolioCard>
         <PortfolioCard to="/project-detail" className="border-right">
-          <img src={rb1} alt="" />
+          <img src={Slider9} alt="" />
           <div className="text">
             Visualisation
             <HiArrowLongRight className="iconArrow" />
@@ -74,7 +77,7 @@ const ProjectHead = styled.div`
 
 const PortfolioContainer = styled.div`
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
+  grid-template-columns: repeat(2, 1fr);
 
   .border-right {
     border-right: 1px solid #302e2c;
