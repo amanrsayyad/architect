@@ -13,56 +13,102 @@ const Faq = () => {
     <FaqContainer>
       <FaqGrid>
         <FaqCard>
-          <h2>ARRAY OF SERVICES AND SKILLS</h2>
+          <h2>START WITH IDEA</h2>
           <p>
-            Duis aute irure dolor in reprehenderit in voluptate velit esse
-            cillum dolore eu fugiat nulla pariatur cepteur sint occaecat.
+            Explore our portfolio, where each project tells a unique story of
+            creativity, functionality, and a commitment to delivering
+            exceptional results. With a passion for design excellence, we
+            transform concepts into architectural masterpieces that stand the
+            test of time.
           </p>
         </FaqCard>
         <FaqCard>
           <FaqDiv>
             <div className="space-between">
               <div>
-                <h5>consultancy</h5>
+                <h5>Architecture</h5>
               </div>
               <div onClick={() => toggleIndex(1)}>
-                <HiOutlineMinus className="iconFaq" />
+                {index === 1 ? (
+                  <HiOutlineMinus className="iconFaq" />
+                ) : (
+                  <TfiPlus className="iconFaq" />
+                )}
               </div>
             </div>
-            <p>
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut elit
-              tellus, luctus nec ullamcorper mattis, pulvinar dapibus leo.
-            </p>
+            {index === 1 ? (
+              <p>
+                Design in architecture is a multifaceted and creative process
+                that involves the conceptualization, planning, and realization
+                of physical structures. Architects are responsible for shaping
+                the built environment, and their designs influence the way
+                people interact with and experience spaces. Here's a description
+                of architecture design.
+              </p>
+            ) : null}
           </FaqDiv>
           <FaqDiv>
             <div className="space-between">
               <div>
-                <h5>architecture</h5>
+                <h5>Interior</h5>
               </div>
-              <div>
-                <TfiPlus className="iconFaq" />
+              <div onClick={() => toggleIndex(2)}>
+                {index === 2 ? (
+                  <HiOutlineMinus className="iconFaq" />
+                ) : (
+                  <TfiPlus className="iconFaq" />
+                )}
               </div>
             </div>
+            {index === 2 ? (
+              <p>
+                We believe that every space has the potential to be
+                extraordinary. Our passion for interior design goes beyond
+                aesthetics – it's about creating environments that inspire,
+                comfort, and reflect the essence of those who inhabit them.
+              </p>
+            ) : null}
           </FaqDiv>
           <FaqDiv>
             <div className="space-between">
               <div>
-                <h5>projects</h5>
+                <h5>Landscape</h5>
               </div>
-              <div>
-                <TfiPlus className="iconFaq" />
+              <div onClick={() => toggleIndex(3)}>
+                {index === 3 ? (
+                  <HiOutlineMinus className="iconFaq" />
+                ) : (
+                  <TfiPlus className="iconFaq" />
+                )}
               </div>
             </div>
+            {index === 3 ? (
+              <p>
+                Boundaries between architecture and nature blur. Our landscape
+                designs redefine outdoor spaces, seamlessly integrating the
+                built environment with the beauty of the natural world.
+              </p>
+            ) : null}
           </FaqDiv>
           <FaqDiv>
             <div className="space-between">
               <div>
-                <h5>construction</h5>
+                <h5>Visualisation</h5>
               </div>
-              <div>
-                <TfiPlus className="iconFaq" />
+              <div onClick={() => toggleIndex(4)}>
+                {index === 4 ? (
+                  <HiOutlineMinus className="iconFaq" />
+                ) : (
+                  <TfiPlus className="iconFaq" />
+                )}
               </div>
             </div>
+            {index === 4 ? (
+              <p>
+                Immerse yourself in dynamic, interactive 3D models that provide
+                a holistic understanding of your project from every angle.
+              </p>
+            ) : null}
           </FaqDiv>
         </FaqCard>
       </FaqGrid>

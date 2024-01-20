@@ -13,14 +13,10 @@ const Vision = () => {
           <div className="data">
             <h3>VISION MOVE US</h3>
             <p>
-              Duis aute irure dolor in reprehenderit in voluptate velit esse
-              cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat
-              cupidatat non provident sunt in culpa qui officia deserunt mollit
-              anim id est laborum.
-            </p>
-            <p>
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut elit
-              tellus, luctus nec ullamcorper mattis, pulvinar dapibus leo.
+              "At FYX, our vision is to create a sustainable and inclusive world
+              where architecture becomes a catalyst for positive social change,
+              fostering connections, and inspiring a harmonious coexistence
+              between people and their environments."
             </p>
           </div>
         </VisionCard>

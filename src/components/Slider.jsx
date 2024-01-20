@@ -5,7 +5,7 @@ import "swiper/css/pagination";
 import "swiper/css/autoplay";
 import { Pagination, EffectFade, Navigation, Autoplay } from "swiper/modules";
 import styled from "styled-components";
-import logoWhite from "../assets/Images/logo-white.png";
+import logoWhite from "../assets/Images/logoSlider.png";
 import Slider1 from "../assets/Images/Slider/Slider1.jpg";
 import Slider2 from "../assets/Images/Slider/Slider2.jpg";
 import Slider3 from "../assets/Images/Slider/Slider3.jpg";
@@ -192,9 +192,9 @@ const SliderContainer = styled.div`
   .logo {
     position: absolute;
     top: 2%;
-    left: 1%;
+    left: 2%;
     background-color: transparent;
-    width: 200px;
+    width: 160px;
     height: 80px;
     z-index: 100;
 
@@ -207,10 +207,10 @@ const SliderContainer = styled.div`
   .border {
     position: absolute;
     top: 12%;
-    right: 2.3%;
+    right: 1.5%;
     background-color: #fff;
     height: 1px;
-    width: 82%;
+    width: 84%;
     z-index: 100;
 
     @media only screen and (max-width: 991px) {

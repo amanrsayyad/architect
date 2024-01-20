@@ -11,9 +11,12 @@ const Footer = () => {
         <FooterCard>
           <h3>Recognizing the need is the primary condition</h3>
           <p>
-            Duis aute irure dolor in reprehenderit in voluptate velit esse
-            cillum dolore eu fugiat nulla pariatur. Excepteursint occaecat
-            cupidatat non providen sunt in culpa.
+            Identifying and understanding the requirements or challenges before
+            undertaking any design or problem-solving process.
+          </p>
+          <p>
+            Architects, as problem solvers, identify constraints before
+            developing creative and innovative solutions.
           </p>
           <ul className="social_list">
             <li className="seprator-line">
