@@ -82,8 +82,7 @@ const HeaderPages = (props) => {
           </ul>
           <ul className="contact-info">
             <li>
-              A: NH 48, Gajanan Nagari, Visawa Park, Sadar Bazar, Satara,
-              Pirwadi, Maharashtra 415001
+              A: Off.No.5 Krishna Empire, Gorakhpur, Khed, NH-4, Satara.415001.
             </li>
             <li>
               <a href="mailto:fyxarchitects@gmail.com">
