@@ -4,7 +4,6 @@ import HeaderPages from "../components/HeaderPages";
 import { babar1, babar2, babar3 } from "../utils/Images";
 
 const ProjectDetail = () => {
-
   useEffect(() => {
     window.scrollTo(0, 0);
   }, []);
@@ -79,6 +78,12 @@ const ProjectGrid = styled.div`
   grid-template-columns: 1.7fr 1fr;
   grid-gap: 2rem;
   padding: 100px 50px;
+
+  @media only screen and (max-width: 991px) {
+    grid-template-columns: 1fr;
+    grid-gap: 1rem;
+    padding: 50px 15px;
+  }
 `;
 
 const ProjectCard = styled.div`
@@ -128,6 +133,11 @@ const ProjectCard = styled.div`
         line-height: 0px !important;
         margin-left: 0.5rem;
       }
+    }
+  }
+  @media only screen and (max-width: 991px) {
+    img {
+      height: 350px;
     }
   }
 `;
