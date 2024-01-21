@@ -1,36 +1,55 @@
 import React from "react";
 import styled from "styled-components";
+import Marquee from "react-fast-marquee";
 
 const SliderTag = () => {
   return (
     <SliderContainer>
       <SliderTrack>
         <SliderDiv>
-          <div className="tag">
-            <span className="seperator"></span>
-            <h5>BUILDING SPACES FOR EVERY PURPOSE SINCE 2005</h5>
-            <span className="seperator"></span>
-          </div>
-          <div className="tag">
-            <h5>architecture & interior design</h5>
-            <span className="seperator"></span>
-          </div>
-          <div className="tag">
-            <h5>BUILDING SPACES FOR EVERY PURPOSE SINCE 2005</h5>
-            <span className="seperator"></span>
-          </div>
-          <div className="tag">
-            <h5>architecture & interior design</h5>
-            <span className="seperator"></span>
-          </div>
-          <div className="tag">
-            <h5>BUILDING SPACES FOR EVERY PURPOSE SINCE 2005</h5>
-            <span className="seperator"></span>
-          </div>
-          <div className="tag">
-            <h5>architecture & interior design</h5>
-            <span className="seperator"></span>
-          </div>
+          <Marquee direction="right" speed={100} delay={5}>
+            <div className="tag">
+              <span className="seperator"></span>
+              <h5>BUILDING SPACES FOR EVERY PURPOSE SINCE 2005</h5>
+              <span className="seperator"></span>
+            </div>
+            <div className="tag">
+              <h5>architecture & interior design</h5>
+              <span className="seperator"></span>
+            </div>
+            <div className="tag">
+              <h5>BUILDING SPACES FOR EVERY PURPOSE SINCE 2005</h5>
+              <span className="seperator"></span>
+            </div>
+            <div className="tag">
+              <h5>architecture & interior design</h5>
+              <span className="seperator"></span>
+            </div>
+            <div className="tag">
+              <h5>BUILDING SPACES FOR EVERY PURPOSE SINCE 2005</h5>
+              <span className="seperator"></span>
+            </div>
+            <div className="tag">
+              <h5>architecture & interior design</h5>
+              <span className="seperator"></span>
+            </div>
+            <div className="tag">
+              <h5>BUILDING SPACES FOR EVERY PURPOSE SINCE 2005</h5>
+              <span className="seperator"></span>
+            </div>
+            <div className="tag">
+              <h5>architecture & interior design</h5>
+              <span className="seperator"></span>
+            </div>
+            <div className="tag">
+              <h5>BUILDING SPACES FOR EVERY PURPOSE SINCE 2005</h5>
+              <span className="seperator"></span>
+            </div>
+            <div className="tag">
+              <h5>architecture & interior design</h5>
+              <span className="seperator"></span>
+            </div>
+          </Marquee>
         </SliderDiv>
       </SliderTrack>
     </SliderContainer>
