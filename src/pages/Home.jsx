@@ -12,15 +12,16 @@ import Test from "../components/Test";
 import ProjectImg from "../components/ProjectImg";
 import Slider from "../components/Slider";
 import Header from "../components/Header";
+import HomeHeader from "../components/HomeHeader";
 
 const Home = () => {
-
   useEffect(() => {
     window.scrollTo(0, 0);
   }, []);
 
   return (
     <div>
+      <HomeHeader />
       <Header />
       <Slider />
       <Projects />

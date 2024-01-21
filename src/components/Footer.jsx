@@ -255,11 +255,16 @@ const CopyFooter = styled.div`
       color: #ccc;
       margin: 0px 5px;
     }
+
+    @media only screen and (max-width: 991px) {
+    }
   }
 
   @media only screen and (max-width: 991px) {
     justify-content: center;
     flex-direction: column;
+    padding-left: 20px;
+    padding-right: 20px;
 
     img {
       margin-bottom: 0.5rem;

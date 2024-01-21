@@ -9,9 +9,11 @@ import Slider8 from "../assets/Images/Slider/Slider8.jpg";
 import Slider9 from "../assets/Images/Slider/Slider9.jpg";
 
 const Portfolio = () => {
+  
   useEffect(() => {
     window.scrollTo(0, 0);
   }, []);
+
   return (
     <div>
       <HeaderPages active3="active" />
@@ -72,6 +74,16 @@ const ProjectHead = styled.div`
     margin-bottom: 11px;
     font-family: "Khand1";
     text-transform: uppercase;
+  }
+
+  @media only screen and (max-width: 991px) {
+    margin-top: 11rem;
+    padding-left: 1.5rem;
+    padding-bottom: 2rem;
+    h2 {
+      font-size: 50px;
+      line-height: 50px;
+    }
   }
 `;
 

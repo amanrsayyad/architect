@@ -7,13 +7,16 @@ import { FaInstagram, FaFacebookF, AiOutlineYoutube } from "../utils/Icons";
 
 const HeaderPages = (props) => {
   const [toggle, setToggle] = useState(false);
+  const [menu, setMenu] = useState(false);
   return (
     <>
       <HeaderContainer>
         <header className="is-sticky">
           <HeaderFlex>
             <div>
-              <img src={logo} className="logo" alt="" />
+              <Link to="/">
+                <img src={logo} className="logo" alt="" />
+              </Link>
             </div>
             <div className="nav-list">
               <ul>
@@ -51,6 +54,45 @@ const HeaderPages = (props) => {
               </MenuIcon>
             </div>
           </HeaderFlex>
+          <MenuIco onClick={() => setMenu(!menu)}>
+            <div className="seperator"></div>
+            <div className="seperator"></div>
+            <div className="seperator"></div>
+            <div className="seperator"></div>
+            <div className="seperator"></div>
+            <div className="seperator"></div>
+          </MenuIco>
+          {menu ? (
+            <MenuDrop>
+              <div className="nav-list-menu">
+                <ul>
+                  <li>
+                    <Link to="/" className={props.active1}>
+                      Home
+                    </Link>
+                  </li>
+                  <div className="seperator"></div>
+                  <li>
+                    <Link to="/about" className={props.active2}>
+                      About Us
+                    </Link>
+                  </li>
+                  <div className="seperator"></div>
+                  <li>
+                    <Link to="/portfolio" className={props.active3}>
+                      Portfolio
+                    </Link>
+                  </li>
+                  <div className="seperator"></div>
+                  <li>
+                    <Link to="/contact" className={props.active4}>
+                      Contact Us
+                    </Link>
+                  </li>
+                </ul>
+              </div>
+            </MenuDrop>
+          ) : null}
         </header>
       </HeaderContainer>
       {toggle ? (
@@ -124,6 +166,15 @@ const HeaderContainer = styled.div`
 
     @media only screen and (max-width: 991px) {
       display: none;
+    }
+  }
+  .nav-list-menu {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    @media only screen and (max-width: 991px) {
+      /* display: none; */
     }
   }
 `;
@@ -292,6 +343,86 @@ const MenuContainter = styled.div`
       margin-bottom: 14px;
       font-family: "Roboto3", sans-serif;
       line-height: 25px;
+    }
+  }
+`;
+
+const MenuIco = styled.div`
+  display: none;
+  @media only screen and (max-width: 991px) {
+    position: absolute;
+    top: 40%;
+    right: 2.5%;
+    transform: translateY(-50%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-left: 2rem;
+    cursor: pointer;
+    background-color: transparent;
+    z-index: 1000000;
+
+    .seperator {
+      width: 1px;
+      height: 27px;
+      background-color: #fff;
+      margin: 0px 4px;
+    }
+  }
+`;
+
+const MenuDrop = styled.div`
+  position: absolute;
+  left: 0%;
+  top: 100%;
+  width: 100%;
+  background-color: #080808;
+  z-index: 1000000;
+  padding: 25px 35px;
+  padding-bottom: 10px;
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-start;
+
+  ul {
+    display: flex;
+    align-items: flex-start;
+    justify-content: flex-start;
+    flex-direction: column;
+
+    li {
+      display: flex;
+      align-items: flex-start;
+      justify-content: flex-start;
+      a {
+        position: relative;
+        color: #8e7861;
+        font-size: 18px;
+        line-height: 1.2em;
+        font-weight: 600;
+        letter-spacing: 0.1em;
+        font-family: "Khand4";
+        text-transform: uppercase;
+        margin-bottom: 11px;
+
+        &:hover:before {
+          transform: scaleX(1);
+        }
+      }
+    }
+  }
+  .active {
+    &::after {
+      content: "";
+      position: absolute;
+      width: 32px;
+      height: 1px;
+      top: calc(50% - 1px);
+      background-color: currentColor;
+      transition: transform 0.52s cubic-bezier(0.22, 0.61, 0.36, 1);
+      transform-origin: left;
+      left: -16px;
+      right: auto;
     }
   }
 `;

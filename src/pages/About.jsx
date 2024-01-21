@@ -9,6 +9,7 @@ import HeaderPages from "../components/HeaderPages";
 import Vision from "../components/Vision";
 
 const About = () => {
+  
   useEffect(() => {
     window.scrollTo(0, 0);
   }, []);

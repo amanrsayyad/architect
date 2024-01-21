@@ -30,12 +30,22 @@ export default Vision;
 const VisionContainer = styled.div`
   padding-top: 110px;
   padding-bottom: 170px;
+
+  @media only screen and (max-width: 991px) {
+    padding-top: 25px;
+    padding-bottom: 25px;
+  }
 `;
 
 const VisionGrid = styled.div`
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   grid-gap: 2rem;
+
+  @media only screen and (max-width: 991px) {
+    grid-template-columns: 1fr;
+    padding: 20px;
+  }
 `;
 
 const VisionCard = styled.div`
@@ -45,10 +55,18 @@ const VisionCard = styled.div`
     top: 50%;
     transform: translateY(-50%);
     left: 0%;
+
+    @media only screen and (max-width: 991px) {
+      position: relative;
+    }
   }
   img {
     width: 90%;
     height: 100%;
+
+    @media only screen and (max-width: 991px) {
+      width: 100%;
+    }
   }
   h3 {
     color: #8e7861;

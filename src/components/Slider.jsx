@@ -1,11 +1,10 @@
-import React, { useRef, useState } from "react";
+import React from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
 import "swiper/css/pagination";
 import "swiper/css/autoplay";
 import { Pagination, EffectFade, Navigation, Autoplay } from "swiper/modules";
 import styled from "styled-components";
-import logoWhite from "../assets/Images/logoSlider.png";
 import Slider1 from "../assets/Images/Slider/Slider1.jpg";
 import Slider2 from "../assets/Images/Slider/Slider2.jpg";
 import Slider3 from "../assets/Images/Slider/Slider3.jpg";
@@ -19,16 +18,6 @@ import { FaInstagram, FaFacebookF, AiOutlineYoutube } from "../utils/Icons";
 const Slider = () => {
   return (
     <SliderContainer>
-      <img src={logoWhite} alt="" className="logo" />
-      <MenuIcon>
-        <div className="seperator"></div>
-        <div className="seperator"></div>
-        <div className="seperator"></div>
-        <div className="seperator"></div>
-        <div className="seperator"></div>
-        <div className="seperator"></div>
-      </MenuIcon>
-      <div className="border"></div>
       <ul className="nav_list">
         <li>
           <Link to="/" className="active">
@@ -173,11 +162,6 @@ const Slider = () => {
           <Overlay></Overlay>
         </SwiperSlide>
       </Swiper>
-      {/* <div className="slider_container">
-        <div className="embla__slide">
-          <img src={Slider7} alt="" />
-        </div>
-      </div> */}
       <div className="overlay"></div>
     </SliderContainer>
   );
@@ -189,36 +173,6 @@ const SliderContainer = styled.div`
   position: relative;
   background-color: transparent;
 
-  .logo {
-    position: absolute;
-    top: 2%;
-    left: 2%;
-    background-color: transparent;
-    width: 160px;
-    height: 80px;
-    z-index: 100;
-
-    @media only screen and (max-width: 991px) {
-      left: 2%;
-      width: 170px;
-      height: 75px;
-    }
-  }
-  .border {
-    position: absolute;
-    top: 12%;
-    right: 1.5%;
-    background-color: #fff;
-    height: 1px;
-    width: 84%;
-    z-index: 100;
-
-    @media only screen and (max-width: 991px) {
-      top: 12.5%;
-      width: 100%;
-      right: 0%;
-    }
-  }
   .nav_list {
     position: absolute;
     right: 3%;
@@ -320,25 +274,6 @@ const SliderContainer = styled.div`
     @media only screen and (max-width: 991px) {
       left: 8%;
     }
-  }
-`;
-
-const MenuIcon = styled.div`
-  position: absolute;
-  top: 4.9%;
-  right: 2.5%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  margin-left: 2rem;
-  cursor: pointer;
-  background-color: transparent;
-
-  .seperator {
-    width: 1px;
-    height: 27px;
-    background-color: #fff;
-    margin: 0px 4px;
   }
 `;
 
