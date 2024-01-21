@@ -119,7 +119,7 @@ const MenuIcon = styled.div`
   @media only screen and (max-width: 991px) {
     position: absolute;
     top: 40%;
-    right: 2.5%;
+    right: 3%;
     transform: translateY(-50%);
     display: flex;
     align-items: center;

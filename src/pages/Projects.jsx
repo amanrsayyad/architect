@@ -10,7 +10,6 @@ import rb1 from "../assets/Images/rb-project/rb1.jpg";
 import { Link } from "react-router-dom";
 
 const Projects = () => {
-  
   useEffect(() => {
     window.scrollTo(0, 0);
   }, []);
@@ -68,6 +67,15 @@ const ProjectHead = styled.div`
     font-family: "Khand1";
     text-transform: uppercase;
   }
+  @media only screen and (max-width: 991px) {
+    margin-top: 11rem;
+    padding-left: 1.5rem;
+    padding-bottom: 2rem;
+    h2 {
+      font-size: 50px;
+      line-height: 50px;
+    }
+  }
 `;
 
 const ProjectGrid = styled.div`
@@ -75,6 +83,11 @@ const ProjectGrid = styled.div`
   grid-template-columns: repeat(3, 1fr);
   grid-gap: 1rem;
   padding: 100px 65px;
+
+  @media only screen and (max-width: 991px) {
+    grid-template-columns: 1fr;
+    padding: 50px 20px;
+  }
 `;
 
 const ProjectCard = styled(Link)`
@@ -102,5 +115,12 @@ const ProjectCard = styled(Link)`
     line-height: 27px;
     margin-top: 0.5rem;
     margin-bottom: 2.5rem !important;
+  }
+  @media only screen and (max-width: 991px) {
+    margin-bottom: 0.7rem;
+
+    h5 {
+      margin-top: 0.3rem;
+    }
   }
 `;

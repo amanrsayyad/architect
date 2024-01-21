@@ -114,11 +114,11 @@ const Slider = () => {
         <SwiperSlide className="embla__slide">
           <img src={Slider6} alt="" />
           <Data>
-            <h1>experiences & knowledge integrated</h1>
+            <h1>Architectural Excellence and Conceptual Sketches</h1>
             <p>
-              Lorem ipsum dolor sit amet consectetur, adipisicing elit.
-              Delectus, perspiciatis explicabo? Ipsa assumenda nulla molestias
-              delectus nisi placeat!
+              Highlighting the architectural beauty and uniqueness. Sketches or
+              conceptual drawings that provide insight into the creative
+              process.
             </p>
           </Data>
           <Overlay></Overlay>
@@ -126,11 +126,11 @@ const Slider = () => {
         <SwiperSlide className="embla__slide">
           <img src={Slider7} alt="" />
           <Data>
-            <h1>experiences & knowledge integrated</h1>
+            <h1>Architectural Innovation and Futuristic Designs</h1>
             <p>
-              Lorem ipsum dolor sit amet consectetur, adipisicing elit.
-              Delectus, perspiciatis explicabo? Ipsa assumenda nulla molestias
-              delectus nisi placeat!
+              Futuristic and visionary approach to architecture. Parametric
+              design principles, displaying the adaptability and complexity
+              achievable through computational design.
             </p>
           </Data>
           <Overlay></Overlay>
@@ -138,11 +138,10 @@ const Slider = () => {
         <SwiperSlide className="embla__slide">
           <img src={Slider8} alt="" />
           <Data>
-            <h1>experiences & knowledge integrated</h1>
+            <h1>Modern Design</h1>
             <p>
-              Lorem ipsum dolor sit amet consectetur, adipisicing elit.
-              Delectus, perspiciatis explicabo? Ipsa assumenda nulla molestias
-              delectus nisi placeat!
+              Showcase buildings or interiors with clean lines and minimalistic
+              aesthetics, characteristic of modern design.
             </p>
           </Data>
           <Overlay></Overlay>
@@ -150,11 +149,10 @@ const Slider = () => {
         <SwiperSlide className="embla__slide">
           <img src={Slider9} alt="" />
           <Data>
-            <h1>experiences & knowledge integrated</h1>
+            <h1>Innovative Solutions & Customized Solutions</h1>
             <p>
-              Lorem ipsum dolor sit amet consectetur, adipisicing elit.
-              Delectus, perspiciatis explicabo? Ipsa assumenda nulla molestias
-              delectus nisi placeat!
+              Showcase projects where your firm has provided unique, tailor-made
+              solutions to meet specific client needs and challenges.
             </p>
           </Data>
           <Overlay></Overlay>
