@@ -7,9 +7,113 @@ const SliderTag = () => {
     <SliderContainer>
       <SliderTrack>
         <SliderDiv>
-          <Marquee direction="right" speed={100} delay={5}>
+          <Marquee direction="right" speed={200} delay={0}>
             <div className="tag">
               <span className="seperator"></span>
+              <h5>BUILDING SPACES FOR EVERY PURPOSE SINCE 2005</h5>
+              <span className="seperator"></span>
+            </div>
+            <div className="tag">
+              <h5>architecture & interior design</h5>
+              <span className="seperator"></span>
+            </div>
+            <div className="tag">
+              <h5>BUILDING SPACES FOR EVERY PURPOSE SINCE 2005</h5>
+              <span className="seperator"></span>
+            </div>
+            <div className="tag">
+              <h5>architecture & interior design</h5>
+              <span className="seperator"></span>
+            </div>
+            <div className="tag">
+              <h5>BUILDING SPACES FOR EVERY PURPOSE SINCE 2005</h5>
+              <span className="seperator"></span>
+            </div>
+            <div className="tag">
+              <h5>architecture & interior design</h5>
+              <span className="seperator"></span>
+            </div>
+            <div className="tag">
+              <h5>BUILDING SPACES FOR EVERY PURPOSE SINCE 2005</h5>
+              <span className="seperator"></span>
+            </div>
+            <div className="tag">
+              <h5>architecture & interior design</h5>
+              <span className="seperator"></span>
+            </div>
+            <div className="tag">
+              <h5>BUILDING SPACES FOR EVERY PURPOSE SINCE 2005</h5>
+              <span className="seperator"></span>
+            </div>
+            <div className="tag">
+              <h5>architecture & interior design</h5>
+              <span className="seperator"></span>
+            </div>
+            <div className="tag">
+              <h5>BUILDING SPACES FOR EVERY PURPOSE SINCE 2005</h5>
+              <span className="seperator"></span>
+            </div>
+            <div className="tag">
+              <h5>architecture & interior design</h5>
+              <span className="seperator"></span>
+            </div>
+            <div className="tag">
+              <h5>BUILDING SPACES FOR EVERY PURPOSE SINCE 2005</h5>
+              <span className="seperator"></span>
+            </div>
+            <div className="tag">
+              <h5>architecture & interior design</h5>
+              <span className="seperator"></span>
+            </div>
+            <div className="tag">
+              <h5>BUILDING SPACES FOR EVERY PURPOSE SINCE 2005</h5>
+              <span className="seperator"></span>
+            </div>
+            <div className="tag">
+              <h5>architecture & interior design</h5>
+              <span className="seperator"></span>
+            </div>
+            <div className="tag">
+              <h5>BUILDING SPACES FOR EVERY PURPOSE SINCE 2005</h5>
+              <span className="seperator"></span>
+            </div>
+            <div className="tag">
+              <h5>architecture & interior design</h5>
+              <span className="seperator"></span>
+            </div>
+            <div className="tag">
+              <h5>BUILDING SPACES FOR EVERY PURPOSE SINCE 2005</h5>
+              <span className="seperator"></span>
+            </div>
+            <div className="tag">
+              <h5>architecture & interior design</h5>
+              <span className="seperator"></span>
+            </div>
+            <div className="tag">
+              <h5>BUILDING SPACES FOR EVERY PURPOSE SINCE 2005</h5>
+              <span className="seperator"></span>
+            </div>
+            <div className="tag">
+              <h5>architecture & interior design</h5>
+              <span className="seperator"></span>
+            </div>
+            <div className="tag">
+              <h5>BUILDING SPACES FOR EVERY PURPOSE SINCE 2005</h5>
+              <span className="seperator"></span>
+            </div>
+            <div className="tag">
+              <h5>architecture & interior design</h5>
+              <span className="seperator"></span>
+            </div>
+            <div className="tag">
+              <h5>BUILDING SPACES FOR EVERY PURPOSE SINCE 2005</h5>
+              <span className="seperator"></span>
+            </div>
+            <div className="tag">
+              <h5>architecture & interior design</h5>
+              <span className="seperator"></span>
+            </div>
+            <div className="tag">
               <h5>BUILDING SPACES FOR EVERY PURPOSE SINCE 2005</h5>
               <span className="seperator"></span>
             </div>
