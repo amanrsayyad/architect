@@ -216,7 +216,7 @@ const SliderContainer = styled.div`
 
   .socail_list {
     position: absolute;
-    right: 7%;
+    right: 5%;
     bottom: 7%;
     display: flex;
     align-items: center;
