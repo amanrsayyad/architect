@@ -1,5 +1,7 @@
 import React from "react";
 import styled from "styled-components";
+import { Link } from "react-router-dom";
+import { HiArrowLongRight } from "../utils/Icons";
 import projectBg2 from "../assets/Images/projectBg2.jpg";
 import projectBg5 from "../assets/Images/projectBg5.jpg";
 import projectBg6 from "../assets/Images/projectBg6.jpg";
@@ -18,13 +20,43 @@ const ProjectImg = () => {
           <img src={projectBg5} alt="" />
         </ProjectCard3>
       </ProjectGrid>
+      <Link to="#">
+        View Portfolio <HiArrowLongRight className="iconArrow" />
+      </Link>
     </ProjectContainer>
   );
 };
 
 export default ProjectImg;
 
-const ProjectContainer = styled.div``;
+const ProjectContainer = styled.div`
+  position: relative;
+  a {
+    position: absolute;
+    bottom: 13%;
+    right: 2%;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    font-family: "Roboto2", sans-serif;
+    font-size: 12px;
+    line-height: 18px;
+    font-weight: 500;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    display: inline-flex;
+    vertical-align: middle;
+    flex-wrap: wrap;
+    color: #8e7861;
+    background-color: transparent;
+    text-align: center;
+
+    .iconArrow {
+      font-size: 25px;
+      margin-left: 0.5rem;
+    }
+  }
+`;
 
 const ProjectGrid = styled.div`
   display: grid;

@@ -15,11 +15,12 @@ const Faq = () => {
         <FaqCard>
           <h2>START WITH IDEA</h2>
           <p>
-            Explore our portfolio, where each project tells a unique story of
-            creativity, functionality, and a commitment to delivering
-            exceptional results. With a passion for design excellence, we
-            transform concepts into architectural masterpieces that stand the
-            test of time.
+            Innovative and contemporary architectural designs for residential,
+            commercial, and institutional projects.
+          </p>
+          <p>
+            Conceptualization, planning, and execution of architectural
+            concepts.
           </p>
         </FaqCard>
         <FaqCard>
@@ -156,7 +157,7 @@ const FaqCard = styled.div`
   p {
     color: #d7d4d4;
     width: 75%;
-    margin-bottom: 2.5rem;
+    margin-bottom: 1rem;
     font-weight: 400;
     font-size: 19px;
     font-family: "Roboto3", sans-serif;

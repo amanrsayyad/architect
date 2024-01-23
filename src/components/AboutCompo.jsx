@@ -11,13 +11,11 @@ const AboutCompo = () => {
         <AboutCard>
           <h2>START WITH IDEA</h2>
           <p>
-            Duis aute irure dolor in reprehenderit in voluptate velit esse
-            cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat
-            cupidatat non provident sunt in culpa qui officia deserunt.
-          </p>
-          <p>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut elit
-            tellus, luctus nec ullamcorper mattis, pulvinar dapibus.
+            Explore our portfolio, where each project tells a unique story of
+            creativity, functionality, and a commitment to delivering
+            exceptional results. With a passion for design excellence, we
+            transform concepts into architectural masterpieces that stand the
+            test of time.
           </p>
           <div style={{ marginTop: "3rem", cursor: "pointer" }}>
             <Link to="/about">
