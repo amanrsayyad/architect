@@ -20,7 +20,7 @@ const ProjectImg = () => {
           <img src={projectBg5} alt="" />
         </ProjectCard3>
       </ProjectGrid>
-      <Link to="#">
+      <Link to="/gallery">
         View Portfolio <HiArrowLongRight className="iconArrow" />
       </Link>
     </ProjectContainer>

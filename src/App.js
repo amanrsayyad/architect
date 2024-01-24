@@ -9,6 +9,7 @@ import Projects from "./pages/Projects";
 import About from "./pages/About";
 import ProjectDetail from "./pages/ProjectDetail";
 import Portfolio from "./pages/Portfolio";
+import Gallery from "./pages/Gallery";
 
 function App() {
   return (
@@ -21,6 +22,7 @@ function App() {
           <Route path="/portfolio" element={<Portfolio />} />
           <Route path="/projects" element={<Projects />} />
           <Route path="/project-detail" element={<ProjectDetail />} />
+          <Route path="/gallery" element={<Gallery />} />
         </Routes>
         <Footer />
         <ScrollTop />
