@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import styled from "styled-components";
-import logo from "../assets/Images/logo.png";
+import logoWhite from "../assets/Images/logoSlider.png";
 import { Link } from "react-router-dom";
 
 const Header = () => {
@@ -30,7 +30,7 @@ const Header = () => {
       <header className={classes}>
         <HeaderFlex>
           <div>
-            <img src={logo} className="logo" alt="" />
+            <img src={logoWhite} className="logo" alt="" />
           </div>
           <ul>
             <li>
@@ -72,7 +72,8 @@ const HeaderContainer = styled.div`
     border-bottom: 1px solid #8e7861;
     animation: 500ms ease-in-out 0s normal none 1 running fadeInDown;
     padding: 15px;
-    padding-right: 60px;
+    padding-right: 30px;
+    padding-left: 30px;
   }
 
   @media only screen and (max-width: 991px) {
@@ -87,7 +88,7 @@ const HeaderFlex = styled.div`
 
   div {
     .logo {
-      width: 160px;
+      width: 130px;
       height: 60px;
     }
   }

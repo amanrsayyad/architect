@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
 import styled from "styled-components";
 import logo from "../assets/Images/logo.png";
+import logoWhite from "../assets/Images/logoSlider.png";
 import { Link } from "react-router-dom";
 import { TfiClose } from "../utils/Icons";
 import { FaInstagram, FaFacebookF, AiOutlineYoutube } from "../utils/Icons";
@@ -15,7 +16,7 @@ const HeaderPages = (props) => {
           <HeaderFlex>
             <div>
               <Link to="/">
-                <img src={logo} className="logo" alt="" />
+                <img src={logoWhite} className="logo" alt="" />
               </Link>
             </div>
             <div className="nav-list">
@@ -156,8 +157,7 @@ const HeaderContainer = styled.div`
     background-color: #080808;
     border-bottom: 1px solid #8e7861;
     animation: 500ms ease-in-out 0s normal none 1 running fadeInDown;
-    padding: 15px;
-    padding-right: 30px;
+    padding: 15px 30px;
   }
   .nav-list {
     display: flex;
@@ -186,7 +186,7 @@ const HeaderFlex = styled.div`
 
   div {
     .logo {
-      width: 160px;
+      width: 130px;
       height: 60px;
     }
   }

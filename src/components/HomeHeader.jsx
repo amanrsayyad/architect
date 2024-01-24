@@ -80,11 +80,11 @@ const HeaderContainer = styled.div`
   }
   .border {
     position: absolute;
-    bottom: 1%;
-    right: 1.5%;
+    bottom: 5%;
+    right: 1.3%;
     background-color: #fff;
     height: 1px;
-    width: 87%;
+    width: 85%;
     z-index: 100;
 
     @media only screen and (max-width: 991px) {

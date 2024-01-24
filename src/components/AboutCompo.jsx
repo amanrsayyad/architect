@@ -65,9 +65,16 @@ const AboutCard = styled.div`
   }
   p {
     color: #d7d4d4;
-    width: 75%;
+    width: 85%;
     margin-bottom: 1rem;
     font-weight: 400;
+    font-size: 19px;
+    font-family: "Roboto3", sans-serif;
+    line-height: 27px;
+
+    @media only screen and (max-width: 991px) {
+      width: 100%;
+    }
   }
 
   @media only screen and (max-width: 991px) {
