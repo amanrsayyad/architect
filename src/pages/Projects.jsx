@@ -5,7 +5,7 @@ import babar1 from "../assets/Images/babar-chowk/babar1.jpg";
 import db1 from "../assets/Images/db-project/db1.jpg";
 import forest1 from "../assets/Images/forest-project/forest1.jpg";
 import vita1 from "../assets/Images/vita-project/vita1.jpg";
-import park1 from "../assets/Images/part-project/park1.jpg";
+import park1 from "../assets/Images/park-project/park1.jpg";
 import rb1 from "../assets/Images/rb-project/rb1.jpg";
 import { Link } from "react-router-dom";
 
