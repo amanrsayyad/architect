@@ -81,24 +81,12 @@ const ProjectCard = styled(Link)`
     position: absolute;
     top: 0%;
     right: 0%;
-    width: 0%;
-    height: 0%;
+    width: 10%;
+    height: 100%;
     object-fit: cover;
     z-index: 100;
     display: none;
-    transition: all 2s ease-in-out;
-    animation: run 5s 2;
-    animation-direction: alternate;
-    -webkit-animation: linear;
-    
-    @keyframes run {
-      0% {
-        right: 0%;
-      }
-      100% {
-        left: 100%;
-      }
-    }
+    overflow: hidden;
   }
   &:hover {
     img {
@@ -106,6 +94,7 @@ const ProjectCard = styled(Link)`
       height: 100%;
       display: block;
       cursor: pointer;
+      transition: ;
     }
   }
 

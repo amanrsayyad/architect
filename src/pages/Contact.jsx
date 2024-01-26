@@ -41,8 +41,7 @@ const Contact = () => {
             <ul>
               <li>
                 <a href="#">
-                  NH 48, Gajanan Nagari, Visawa Park, Sadar Bazar, Satara,
-                  Pirwadi, Maharashtra 415001
+                  Off.No.5 Krishna Empire, Gorakhpur, Khed, NH-4, Satara.415001.
                 </a>
               </li>
               <li>

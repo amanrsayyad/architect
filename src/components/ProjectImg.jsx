@@ -36,6 +36,7 @@ export default ProjectImg;
 
 const ProjectContainer = styled.div`
   position: relative;
+  overflow: hidden;
   a {
     position: absolute;
     bottom: 13%;
