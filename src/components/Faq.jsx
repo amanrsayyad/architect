@@ -121,6 +121,7 @@ export default Faq;
 
 const FaqContainer = styled.div`
   padding: 130px 100px;
+  /* padding-top: 100px; */
 
   @media only screen and (max-width: 991px) {
     padding: 100px 30px;

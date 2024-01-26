@@ -10,14 +10,16 @@ const Vision = () => {
           <img src={visionBg} alt="" />
         </VisionCard>
         <VisionCard>
-          <div className="data">
-            <h3>VISION MOVE US</h3>
-            <p>
-              "At FYX, our vision is to create a sustainable and inclusive world
-              where architecture becomes a catalyst for positive social change,
-              fostering connections, and inspiring a harmonious coexistence
-              between people and their environments."
-            </p>
+          <div className="positionFixed">
+            <div className="data">
+              <h3>VISION MOVE US</h3>
+              <p>
+                "At FYX, our vision is to create a sustainable and inclusive
+                world where architecture becomes a catalyst for positive social
+                change, fostering connections, and inspiring a harmonious
+                coexistence between people and their environments."
+              </p>
+            </div>
           </div>
         </VisionCard>
       </VisionGrid>
@@ -50,11 +52,17 @@ const VisionGrid = styled.div`
 
 const VisionCard = styled.div`
   position: relative;
+
+  .positionFixed {
+    position: sticky;
+    top: 25%;
+  } 
+
   .data {
-    position: absolute;
+    /* position: absolute;
     top: 50%;
     transform: translateY(-50%);
-    left: 0%;
+    left: 0%; */
 
     @media only screen and (max-width: 991px) {
       position: relative;
@@ -84,7 +92,7 @@ const VisionCard = styled.div`
     width: 85% !important;
     margin-bottom: 0.5rem !important;
     font-weight: 400;
-    font-size: 16px !important;
+    font-size: 20px !important;
     font-family: "Roboto3", sans-serif;
     line-height: 27px;
   }

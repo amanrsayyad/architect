@@ -1,5 +1,5 @@
 import aboutBg from "../assets/Images/aboutBg.jpg";
-import visionBg from "../assets/Images/visionBg.jpg";
+import visionBg from "../assets/Images/visionTeam.jpg";
 
 // PROJECT IMPORTS
 import babar1 from "../assets/Images/babar-chowk/babar1.jpg";

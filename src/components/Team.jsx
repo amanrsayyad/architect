@@ -4,6 +4,7 @@ import { FaInstagram, FaFacebookF, AiOutlineYoutube } from "../utils/Icons";
 import teamBg from "../assets/Images/teamBg.jpg";
 import team1 from "../assets/Images/team1.jpg";
 import team2 from "../assets/Images/team2.jpg";
+import team3 from "../assets/Images/team3.jpg";
 
 const Team = () => {
   return (
@@ -24,15 +25,15 @@ const Team = () => {
             <p>Urbanism and spatial planning</p>
           </div>
           <div className="card">
-            <img src={team1} alt="" />
+            <img src={team3} alt="" />
             <h5>VINCENT RASEL</h5>
             <p>CEO / Architect</p>
           </div>
-          <div className="card">
+          {/* <div className="card">
             <img src={team2} alt="" />
             <h5>VICTORIA SAVANO</h5>
             <p>Urbanism and spatial planning</p>
-          </div>
+          </div> */}
         </TeamCard>
       </TeamGrid>
     </TeamContainer>
@@ -43,6 +44,7 @@ export default Team;
 
 const TeamContainer = styled.div`
   padding: 0px 25px;
+  padding-top: 100px;
 `;
 
 const TeamGrid = styled.div`
@@ -74,7 +76,7 @@ const TeamCard = styled.div`
   .card {
     img {
       width: 100%;
-      height: 80%;
+      height: 550px;
       object-fit: cover;
       margin-bottom: 0.5rem;
     }

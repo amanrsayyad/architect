@@ -76,6 +76,7 @@ const ProjectCard = styled(Link)`
   border-left: 1px solid #302e2c;
   padding: 110px;
   z-index: 100;
+  overflow: hidden;
 
   img {
     position: absolute;
@@ -94,7 +95,6 @@ const ProjectCard = styled(Link)`
       height: 100%;
       display: block;
       cursor: pointer;
-      transition: ;
     }
   }
 
@@ -111,11 +111,9 @@ const ProjectCard = styled(Link)`
     font-family: "Heebo1";
 
     @media only screen and (max-width: 991px) {
-      font-size: 120px;
-
-      &:nth-child(6) {
-        bottom: 30px;
-      }
+      font-size: 100px;
+      right: 5px;
+      bottom: -25px;
     }
   }
   .text {
@@ -140,6 +138,7 @@ const ProjectCard = styled(Link)`
 
     @media only screen and (max-width: 991px) {
       font-size: 17px;
+      left: 4%;
 
       .iconArrow {
         font-size: 20px;

@@ -1,6 +1,6 @@
 import React from "react";
 import styled from "styled-components";
-import contactImg from "../assets/Images/contactImg.png";
+import contactImg from "../assets/Images/contactBg.JPG";
 import Button from "./Button";
 
 const ContactCompo = () => {
@@ -47,7 +47,13 @@ const ContactContainer = styled.div`
 const ContactImg = styled.div`
   img {
     width: 100%;
-    height: 100%;
+    height: 1000px;
+    object-fit: cover;
+
+    @media only screen and (max-width: 991px) {
+      height: 100%;
+      padding: 0px 15px;
+    }
   }
 `;
 

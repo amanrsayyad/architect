@@ -22,30 +22,32 @@ const ProjectDetail = () => {
             <img src={babar3} alt="" />
           </ProjectCard>
           <ProjectCard>
-            <h2>Babar Chowk</h2>
-            <p>
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-              eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
-              enim ad minim veniam, quis nostrud exercitation ullamco laboris
-              nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in
-              reprehenderit in voluptate velit esse cillum dolore eu fugiat
-              nulla pariatur. Excepteur sint occaecat cupidatat non proident,
-              sunt in culpa qui officia deserunt mollit anim id est laborum.
-            </p>
-            <ul>
-              <li>
-                <h5>CLIENT :</h5>
-                <p>Qode Interactive</p>
-              </li>
-              <li>
-                <h5>AREA :</h5>
-                <p>400 Sq.Ft</p>
-              </li>
-              <li>
-                <h5>LOCATION :</h5>
-                <p>Satara</p>
-              </li>
-            </ul>
+            <div className="data">
+              <h2>Babar Chowk</h2>
+              <p>
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+                eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
+                enim ad minim veniam, quis nostrud exercitation ullamco laboris
+                nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor
+                in reprehenderit in voluptate velit esse cillum dolore eu fugiat
+                nulla pariatur. Excepteur sint occaecat cupidatat non proident,
+                sunt in culpa qui officia deserunt mollit anim id est laborum.
+              </p>
+              <ul>
+                <li>
+                  <h5>CLIENT :</h5>
+                  <p>Qode Interactive</p>
+                </li>
+                <li>
+                  <h5>AREA :</h5>
+                  <p>400 Sq.Ft</p>
+                </li>
+                <li>
+                  <h5>LOCATION :</h5>
+                  <p>Satara</p>
+                </li>
+              </ul>
+            </div>
           </ProjectCard>
         </ProjectGrid>
       </ProjectContainer>
@@ -87,6 +89,13 @@ const ProjectGrid = styled.div`
 `;
 
 const ProjectCard = styled.div`
+  position: relative;
+
+  .data {
+    position: sticky;
+    top: 15%;
+  }
+
   img {
     width: 100%;
     height: 90vh;
