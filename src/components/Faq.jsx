@@ -13,7 +13,7 @@ const Faq = () => {
     <FaqContainer>
       <FaqGrid>
         <FaqCard>
-          <h2>START WITH IDEA</h2>
+          <h2>ARRAY OF SERVICES AND SKILLS</h2>
           <p>
             Innovative and contemporary architectural designs for residential,
             commercial, and institutional projects.

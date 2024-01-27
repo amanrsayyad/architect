@@ -26,7 +26,7 @@ const ProjectImg = () => {
         </ProjectCard3>
       </ProjectGrid>
       <Link to="/gallery">
-        View Portfolio <HiArrowLongRight className="iconArrow" />
+        View All Work <HiArrowLongRight className="iconArrow" />
       </Link>
     </ProjectContainer>
   );
