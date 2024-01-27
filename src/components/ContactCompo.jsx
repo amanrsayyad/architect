@@ -49,7 +49,7 @@ const ContactContainer = styled.div`
 const ContactImg = styled.div`
   img {
     width: 100%;
-    height: 1000px;
+    height: 600px;
     object-fit: cover;
 
     @media only screen and (max-width: 991px) {

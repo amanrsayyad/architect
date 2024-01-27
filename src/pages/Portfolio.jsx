@@ -106,6 +106,7 @@ const PortfolioCard = styled(Link)`
   border-left: 1px solid #302e2c;
   padding: 110px;
   z-index: 100;
+  overflow: hidden;
 
   position: relative;
   border-bottom: 1px solid #302e2c;
@@ -135,9 +136,9 @@ const PortfolioCard = styled(Link)`
 
   .number {
     position: absolute;
-    right: 25px;
-    bottom: -20px;
-    font-size: 100px;
+    right: 58px;
+    bottom: -35px;
+    font-size: 170px;
     font-weight: 100;
     line-height: 1;
     color: #211e19;
