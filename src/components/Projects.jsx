@@ -124,7 +124,7 @@ const ProjectCard = styled(Link)`
     align-items: center;
     justify-content: center;
     color: #8e7861;
-    font-size: 26px;
+    font-size: 20px;
     line-height: 1.2em;
     font-weight: 600;
     letter-spacing: 0.1em;

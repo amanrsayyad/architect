@@ -10,21 +10,23 @@ const ContactCompo = () => {
         <img src={contactImg} alt="" />
       </ContactImg>
       <ContactForm>
-        <h2>Contact Us</h2>
-        <form>
-          <div className="grid">
-            <input type="text" placeholder="Full name" />
-            <input type="text" placeholder="E-mail" />
-          </div>
-          <textarea
-            name=""
-            id=""
-            cols="30"
-            rows="4"
-            placeholder="Message"
-          ></textarea>
-          <Button buttonName="send message" />
-        </form>
+        <div className="data">
+          <h2>Contact Us</h2>
+          <form>
+            <div className="grid">
+              <input type="text" placeholder="Full name" />
+              <input type="text" placeholder="E-mail" />
+            </div>
+            <textarea
+              name=""
+              id=""
+              cols="30"
+              rows="4"
+              placeholder="Message"
+            ></textarea>
+            <Button buttonName="send message" />
+          </form>
+        </div>
       </ContactForm>
     </ContactContainer>
   );
@@ -58,8 +60,15 @@ const ContactImg = styled.div`
 `;
 
 const ContactForm = styled.div`
+  position: relative;
   padding: 90px 0px;
   padding-right: 65px;
+
+  .data {
+    position: sticky;
+    top: 20%;
+  }
+
   h2 {
     color: #8e7861;
     font-size: 40px;
