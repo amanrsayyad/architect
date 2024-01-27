@@ -36,6 +36,7 @@ export const PageBg = styled.div`
   img {
     width: 100%;
     height: 75vh;
+    object-fit: cover;
 
     @media only screen and (max-width: 991px) {
       height: 20vh;

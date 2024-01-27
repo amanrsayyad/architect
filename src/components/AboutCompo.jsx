@@ -1,6 +1,6 @@
 import React from "react";
 import styled from "styled-components";
-import aboutImg from "../assets/Images/aboutusHeader.JPG";
+import aboutImg from "../assets/Images/Sketch1.png";
 import Button from "./Button";
 import { Link } from "react-router-dom";
 

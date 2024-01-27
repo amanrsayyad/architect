@@ -1,6 +1,7 @@
 import React, { useEffect } from "react";
 import { PageHead, PageBg, PageBreak } from "../utils/styles";
 import { aboutBg } from "../utils/Images";
+import aboutImg from "../assets/Images/aboutusHeader.JPG";
 import Faq from "../components/Faq";
 import Team from "../components/Team";
 import Test from "../components/Test";
@@ -21,7 +22,7 @@ const About = () => {
         <h2>about us</h2>
       </PageHead>
       <PageBg>
-        <img src={aboutBg} alt="" />
+        <img src={aboutImg} alt="" />
       </PageBg>
       <Faq />
       <Team />

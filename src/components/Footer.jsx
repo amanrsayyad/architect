@@ -54,6 +54,11 @@ const Footer = () => {
               </a>
             </li>
             <li>
+              <a href="mailto:studio@fyxarchitects.in">
+                E: studio@fyxarchitects.in
+              </a>
+            </li>
+            <li>
               <a href="tel:9006990019">T: +91 900 69 900 19</a>
             </li>
             <li>H: Monday to Saturday 10am - 6pm</li>
