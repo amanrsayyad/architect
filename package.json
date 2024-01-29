@@ -10,11 +10,13 @@
     "embla-carousel-autoplay": "^8.0.0-rc18",
     "embla-carousel-react": "^8.0.0-rc18",
     "react": "^18.2.0",
+    "react-countup": "^6.5.0",
     "react-dom": "^18.2.0",
     "react-fast-marquee": "^1.6.3",
     "react-icons": "^4.12.0",
     "react-router-dom": "^6.21.0",
     "react-scripts": "5.0.1",
+    "react-scroll-trigger": "^0.6.14",
     "styled-components": "^6.1.2",
     "swiper": "^11.0.5",
     "web-vitals": "^2.1.4"

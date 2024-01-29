@@ -1,28 +1,42 @@
-import React from "react";
+import React, { useState } from "react";
 import styled from "styled-components";
+import CountUp from "react-countup";
+import ScrollTrigger from "react-scroll-trigger";
 
 const Counter = () => {
+  const [counterOn, setCounterOn] = useState(false);
   return (
-    <CounterContainer>
-      <CounterGrid>
-        <CounterCard>
-          <span>100 +</span>
-          <p>Clients</p>
-        </CounterCard>
-        <CounterCard>
-          <span>10 +</span>
-          <p>Citys</p>
-        </CounterCard>
-        <CounterCard>
-          <span>100000+</span>
-          <p>Square Feets</p>
-        </CounterCard>
-        {/* <CounterCard>
-          <span>45</span>
-          <p>world awards</p>
-        </CounterCard> */}
-      </CounterGrid>
-    </CounterContainer>
+    <ScrollTrigger
+      onEnter={() => setCounterOn(true)}
+      onExit={() => setCounterOn(false)}
+    >
+      <CounterContainer>
+        {counterOn && (
+          <>
+            <CounterGrid>
+              <CounterCard>
+                <span>
+                  <CountUp start={0} end={100} duration={2} delay={0} /> +
+                </span>
+                <p>Clients</p>
+              </CounterCard>
+              <CounterCard>
+                <span>
+                  <CountUp start={0} end={10} duration={2} delay={0} /> +
+                </span>
+                <p>Citys</p>
+              </CounterCard>
+              <CounterCard>
+                <span>
+                  <CountUp start={0} end={100000} duration={2} delay={0} /> +
+                </span>
+                <p>Square Feets</p>
+              </CounterCard>
+            </CounterGrid>
+          </>
+        )}
+      </CounterContainer>
+    </ScrollTrigger>
   );
 };
 
