@@ -27,7 +27,9 @@ const Faq = () => {
           <FaqDiv>
             <div className="space-between">
               <div>
-                <h5>Architecture</h5>
+                <Link to="/project-detail">
+                  <h5>Architecture</h5>
+                </Link>
               </div>
               <div onClick={() => toggleIndex(1)}>
                 {index === 1 ? (
@@ -51,7 +53,9 @@ const Faq = () => {
           <FaqDiv>
             <div className="space-between">
               <div>
-                <h5>Interior</h5>
+                <Link to="/project-detail">
+                  <h5>Interior</h5>
+                </Link>
               </div>
               <div onClick={() => toggleIndex(2)}>
                 {index === 2 ? (
@@ -73,7 +77,9 @@ const Faq = () => {
           <FaqDiv>
             <div className="space-between">
               <div>
-                <h5>Landscape</h5>
+                <Link to="/project-detail">
+                  <h5>Landscape</h5>
+                </Link>
               </div>
               <div onClick={() => toggleIndex(3)}>
                 {index === 3 ? (
@@ -94,7 +100,9 @@ const Faq = () => {
           <FaqDiv>
             <div className="space-between">
               <div>
-                <h5>Visualisation</h5>
+                <Link to="/project-detail">
+                  <h5>Visualisation</h5>
+                </Link>
               </div>
               <div onClick={() => toggleIndex(4)}>
                 {index === 4 ? (

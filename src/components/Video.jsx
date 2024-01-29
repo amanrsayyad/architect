@@ -1,6 +1,5 @@
 import React, { useState } from "react";
 import styled from "styled-components";
-import vidImg from "../assets/Images/vidImg.jpg";
 import { FaPlay } from "react-icons/fa";
 import { TfiClose } from "react-icons/tfi";
 import Slider5 from "../assets/Images/Slider/Slider5.jpg";
@@ -73,6 +72,11 @@ const VidContainer = styled.div`
     color: #fff;
     font-size: 28px;
     background-color: transparent;
+
+    @media only screen and (max-width: 991px) {
+      top: 25%;
+      right: 4%;
+    }
   }
   @media only screen and (max-width: 991px) {
     img {
@@ -92,6 +96,11 @@ const PopupContainer = styled.div`
   iframe {
     width: 800px;
     height: 450px;
+
+    @media only screen and (max-width: 991px) {
+      width: 400px;
+      height: 350px;
+    }
   }
 `;
 

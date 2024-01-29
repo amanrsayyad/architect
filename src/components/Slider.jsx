@@ -3,6 +3,8 @@ import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
 import "swiper/css/pagination";
 import "swiper/css/autoplay";
+import "swiper/less";
+import "swiper/less/effect-fade";
 import { Pagination, EffectFade, Navigation, Autoplay } from "swiper/modules";
 import styled from "styled-components";
 import Slider1 from "../assets/Images/Slider/Slider1.jpg";
@@ -55,15 +57,17 @@ const Slider = () => {
         </li>
       </ul>
       <Swiper
-        loop={true}
-        navigation={true}
-        effect={"fade"}
-        autoplay={true}
-        modules={[Pagination, EffectFade, Navigation, Autoplay]}
+        // effect={"fade"}
+        autoplay={{
+          delay: 2500,
+          disableOnInteraction: false,
+        }}
         pagination={{
           dynamicBullets: true,
         }}
-        className="slider_container"
+        navigation={true}
+        // EffectFade
+        modules={[Autoplay, Pagination, Navigation]}
       >
         <SwiperSlide className="embla__slide">
           <img src={Slider7} alt="" />
@@ -292,6 +296,18 @@ const Data = styled.div`
     margin-bottom: 11px;
     font-family: "Khand1";
     text-transform: uppercase;
+    animation: head 0.5s;
+    animation-timing-function: ease-in;
+    animation-direction: alternate;
+  }
+  @keyframes head {
+    0% {
+      transition: all 0.5s ease-in;
+      margin-left: 2rem;
+    }
+    100% {
+      margin-left: 0rem;
+    }
   }
   p {
     background-color: transparent;

@@ -137,7 +137,7 @@ const ProjectCard = styled(Link)`
     }
 
     @media only screen and (max-width: 991px) {
-      font-size: 17px;
+      font-size: 19px;
       left: 4%;
 
       .iconArrow {

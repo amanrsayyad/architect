@@ -90,5 +90,9 @@ const CounterCard = styled.div`
     font-size: 100px;
     line-height: 1;
     color: #756049;
+
+    @media only screen and (max-width: 991px) {
+      font-size: 75px;
+    }
   }
 `;

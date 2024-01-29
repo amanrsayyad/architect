@@ -68,16 +68,16 @@ const Footer = () => {
           <h5>Portfolio</h5>
           <ul>
             <li>
-              <Link to="#">Architecture</Link>
+              <Link to="/project-detail">Architecture</Link>
             </li>
             <li>
-              <Link to="#">Interior</Link>
+              <Link to="/project-detail">Interior</Link>
             </li>
             <li>
-              <Link to="#">Landscape</Link>
+              <Link to="/project-detail">Landscape</Link>
             </li>
             <li>
-              <Link to="#">Visualisation</Link>
+              <Link to="/project-detail">Visualisation</Link>
             </li>
           </ul>
         </FooterCard>

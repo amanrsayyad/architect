@@ -74,11 +74,12 @@ const AboutCard = styled.div`
 
     @media only screen and (max-width: 991px) {
       width: 100%;
+      font-size: 18px;
     }
   }
 
   @media only screen and (max-width: 991px) {
     padding-top: 100px;
-    padding-left: 30px;
+    padding-left: 15px;
   }
 `;
