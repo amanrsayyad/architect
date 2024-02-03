@@ -1,33 +1,48 @@
-import React, { useEffect } from "react";
+import React, { useEffect, useState } from "react";
 import styled from "styled-components";
 import { Link } from "react-router-dom";
 import { HiArrowLongRight } from "../utils/Icons";
 import projectBg2 from "../assets/Images/projectBg2.jpg";
 import projectBg5 from "../assets/Images/projectBg5.jpg";
 import projectBg6 from "../assets/Images/projectBg6.jpg";
+import { db4 } from "../utils/Images";
 import AOS from "aos";
 import "aos/dist/aos.css";
+import ScrollTrigger from "react-scroll-trigger";
 
 const ProjectImg = () => {
+  const [trueImg, setTrueImg] = useState(false);
+
   useEffect(() => {
     AOS.init();
   }, []);
+
   return (
     <ProjectContainer>
-      <ProjectGrid>
-        <ProjectCard data-aos="zoom-out-left" data-aos-delay="50">
-          <img src={projectBg2} alt="" />
-        </ProjectCard>
-        <ProjectCard2 data-aos="zoom-out-left" data-aos-delay="100">
-          <img src={projectBg6} alt="" />
-        </ProjectCard2>
-        <ProjectCard3 data-aos="zoom-out-left" data-aos-delay="150">
-          <img src={projectBg5} alt="" />
-        </ProjectCard3>
-      </ProjectGrid>
-      <Link to="/gallery">
-        View All Work <HiArrowLongRight className="iconArrow" />
-      </Link>
+      <ScrollTrigger
+        onEnter={() => setTrueImg(true)}
+        onExit={() => setTrueImg(false)}
+      >
+        {trueImg && (
+          <ProjectGrid>
+            <ProjectCard>
+              <img src={projectBg2} alt="" />
+            </ProjectCard>
+            <ProjectCard2 className="img2">
+              <img src={projectBg6} alt="" />
+            </ProjectCard2>
+            <ProjectCard3>
+              <img src={db4} alt="" />
+            </ProjectCard3>
+            <ProjectCard4>
+              <img src={projectBg5} alt="" />
+            </ProjectCard4>
+          </ProjectGrid>
+        )}
+        <Link to="/gallery">
+          View All Work <HiArrowLongRight className="iconArrow" />
+        </Link>
+      </ScrollTrigger>
     </ProjectContainer>
   );
 };
@@ -65,10 +80,11 @@ const ProjectContainer = styled.div`
 `;
 
 const ProjectGrid = styled.div`
-  display: grid;
-  grid-template-columns: 2fr 1.5fr 1fr;
-  grid-gap: 1rem;
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
   padding: 100px 15px;
+  overflow: hidden;
 
   @media only screen and (max-width: 991px) {
     grid-template-columns: 1fr;
@@ -78,8 +94,23 @@ const ProjectGrid = styled.div`
 const ProjectCard = styled.div`
   img {
     width: 100%;
-    height: 600px;
+    height: 550px;
     object-fit: cover;
+    animation: img1 1.5s;
+    animation-timing-function: ease-out;
+    animation-direction: alternate;
+    margin-left: -20rem;
+  }
+  @keyframes img1 {
+    0% {
+      transition: all 0.5s ease-in;
+      height: 300px;
+      margin-left: 0rem;
+    }
+    100% {
+      height: 550px;
+      margin-left: -20rem;
+    }
   }
 
   @media only screen and (max-width: 991px) {
@@ -90,17 +121,81 @@ const ProjectCard = styled.div`
 `;
 
 const ProjectCard2 = styled.div`
+  margin-left: 10px;
   img {
     width: 100%;
     height: 500px;
     object-fit: cover;
+    animation: img2 1.5s;
+    animation-timing-function: ease-out;
+    animation-direction: alternate;
+    margin-left: -20rem;
+  }
+  @keyframes img2 {
+    0% {
+      transition: all 0.5s ease-in;
+      height: 300px;
+      margin-left: 0rem;
+    }
+    100% {
+      height: 500px;
+      margin-left: -20rem;
+    }
   }
 `;
 
 const ProjectCard3 = styled.div`
+  margin-left: 10px;
   img {
     width: 100%;
+    height: 450px;
+    object-fit: cover;
+    animation: img3 1.5s;
+    animation-timing-function: ease-out;
+    animation-direction: alternate;
+    margin-left: -20rem;
+  }
+  @keyframes img3 {
+    0% {
+      transition: all 0.5s ease-in;
+      height: 300px;
+      margin-left: 0rem;
+    }
+    100% {
+      height: 450px;
+      margin-left: -20rem;
+    }
+  }
+`;
+
+const ProjectCard4 = styled.div`
+  margin-left: 10px;
+  img {
+    width: 450px;
     height: 350px;
+    object-fit: cover;
+    animation: img4 1.5s;
+    animation-timing-function: ease-out;
+    animation-direction: alternate;
+    margin-left: -20rem;
+  }
+  @keyframes img4 {
+    0% {
+      transition: all 0.5s ease-in;
+      height: 300px;
+      margin-left: 0rem;
+    }
+    100% {
+      height: 350px;
+      margin-left: -20rem;
+    }
+  }
+`;
+
+const ProjectCard5 = styled.div`
+  img {
+    width: 100%;
+    height: 550px;
     object-fit: cover;
   }
 `;

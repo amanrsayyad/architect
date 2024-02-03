@@ -8,14 +8,14 @@ const Projects = () => {
   return (
     <ProjectContainer>
       <ProjectCard to="/project-detail">
-        <img src={babar1} alt="" />
+        <img src={babar1} alt="" data-aos="fade-left" />
         <div className="text">
           Babar Chowk, Satara <HiArrowLongRight className="iconArrow" />
         </div>
         <span className="number">01</span>
       </ProjectCard>
       <ProjectCard to="/project-detail" className="border-right">
-        <img src={db1} alt="" />
+        <img src={db1} alt="" data-aos="fade-left" />
         <div className="text">
           DB Residence, bawada, Indapur{" "}
           <HiArrowLongRight className="iconArrow" />
@@ -90,11 +90,16 @@ const ProjectCard = styled(Link)`
     overflow: hidden;
   }
   &:hover {
+    transition: all 1s ease-in;
     img {
+      position: absolute;
+      top: 0%;
+      right: 0%;
       width: 100%;
       height: 100%;
       display: block;
       cursor: pointer;
+      transition: all 1s ease-in;
     }
   }
 

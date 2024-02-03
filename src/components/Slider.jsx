@@ -57,17 +57,18 @@ const Slider = () => {
         </li>
       </ul>
       <Swiper
-        // effect={"fade"}
+        loop={true}
         autoplay={{
           delay: 2500,
           disableOnInteraction: false,
         }}
+        effect={"fade"}
         pagination={{
           dynamicBullets: true,
         }}
         navigation={true}
         // EffectFade
-        modules={[Autoplay, Pagination, Navigation]}
+        modules={[Autoplay, EffectFade, Pagination, Navigation]}
       >
         <SwiperSlide className="embla__slide">
           <img src={Slider7} alt="" />
@@ -296,14 +297,17 @@ const Data = styled.div`
     margin-bottom: 11px;
     font-family: "Khand1";
     text-transform: uppercase;
+    display: flex;
+    align-items: center;
+    justify-content: center;
     animation: head 0.5s;
-    animation-timing-function: ease-in;
+    animation-timing-function: ease-out;
     animation-direction: alternate;
   }
   @keyframes head {
     0% {
       transition: all 0.5s ease-in;
-      margin-left: 2rem;
+      margin-left: 6rem;
     }
     100% {
       margin-left: 0rem;
@@ -315,9 +319,21 @@ const Data = styled.div`
     width: 45%;
     margin-bottom: 1.4rem;
     font-weight: 500;
-    font-size: 18px;
+    font-size: 19px;
     font-family: "Roboto3", sans-serif;
     line-height: 27px;
+    animation: para 1s;
+    animation-timing-function: ease-out;
+    animation-direction: alternate;
+  }
+  @keyframes para {
+    0% {
+      transition: all 0.5s ease-in;
+      margin-left: 5rem;
+    }
+    100% {
+      margin-left: 0rem;
+    }
   }
   @media only screen and (max-width: 991px) {
     h1 {
