@@ -1,5 +1,6 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
+import axios from "axios";
 import "./App.css";
 import Home from "./pages/Home";
 import Footer from "./components/Footer";
@@ -12,6 +13,22 @@ import Portfolio from "./pages/Portfolio";
 import Gallery from "./pages/Gallery";
 
 function App() {
+  const handleLogin = async () => {
+    try {
+      const response = await axios.post(
+        "http://admin.fyxarchitects.in/api/data/userlogin",
+        { username: "fyx", password: "jayhanuman" }
+      );
+      localStorage.setItem(
+        "TOKEN",
+        JSON.stringify(response.data.data.access_token)
+      );
+    } catch (error) {
+      console.error("Error creating post:", error);
+    }
+  };
+  handleLogin();
+
   return (
     <div>
       <Router>

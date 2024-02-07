@@ -8,7 +8,6 @@ const Header = () => {
 
   // on render, set listener
   useEffect(() => {
-    console.log("hello");
     window.addEventListener("scroll", isSticky);
     return () => {
       window.removeEventListener("scroll", isSticky);

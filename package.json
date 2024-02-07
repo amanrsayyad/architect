@@ -7,6 +7,7 @@
     "@testing-library/react": "^13.4.0",
     "@testing-library/user-event": "^13.5.0",
     "aos": "^2.3.4",
+    "axios": "^1.6.7",
     "bootstrap": "^5.3.2",
     "embla-carousel-autoplay": "^8.0.0-rc18",
     "embla-carousel-react": "^8.0.0-rc18",

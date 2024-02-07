@@ -1,26 +1,28 @@
-import React, { useEffect } from "react";
+import React, { useEffect, useState } from "react";
 import styled from "styled-components";
 import HeaderPages from "../components/HeaderPages";
-import {
-  babar1,
-  babar2,
-  babar3,
-  db1,
-  forest1,
-  vita1,
-  park1,
-  rb1,
-  db2,
-  db3,
-  db4,
-  db5,
-} from "../utils/Images";
 import { PageBreak } from "../utils/styles";
 import AOS from "aos";
 import "aos/dist/aos.css";
 
 const Gallery = () => {
+  const [gallery, setGallery] = useState();
+
+  const tokenName = JSON.parse(localStorage.getItem("TOKEN"));
+
   useEffect(() => {
+    fetch("http://admin.fyxarchitects.in/api/data/GetWorkGalaryList", {
+      headers: {
+        Authorization: `bearer ${tokenName}`,
+      },
+    })
+      .then((res) => {
+        return res.json();
+      })
+      .then((data) => {
+        setGallery(data.data);
+      });
+
     window.scrollTo(0, 0);
     AOS.init();
   }, []);
@@ -30,42 +32,55 @@ const Gallery = () => {
       <HeaderPages />
       <GalleryContainer>
         <GalleryGrid>
-          <GalleryCard data-aos="zoom-in-right" data-aos-delay="50">
-            <img src={db4} alt="" />
-          </GalleryCard>
-          <GalleryCard data-aos="zoom-in-up" data-aos-delay="50">
-            <img src={babar1} alt="" />
-          </GalleryCard>
-          <GalleryCard data-aos="fade-down" data-aos-delay="50">
-            <img src={babar2} alt="" />
-          </GalleryCard>
-          <GalleryCard data-aos="fade-down" data-aos-delay="50">
-            <img src={db1} alt="" />
-          </GalleryCard>
-          <GalleryCard data-aos="fade-down" data-aos-delay="50">
-            <img src={babar3} alt="" />
-          </GalleryCard>
-          <GalleryCard data-aos="fade-down" data-aos-delay="50">
-            <img src={db3} alt="" />
-          </GalleryCard>
-          <GalleryCard data-aos="fade-down" data-aos-delay="100">
-            <img src={vita1} alt="" />
-          </GalleryCard>
-          <GalleryCard data-aos="fade-down" data-aos-delay="100">
-            <img src={forest1} alt="" />
-          </GalleryCard>
-          <GalleryCard data-aos="fade-down" data-aos-delay="100">
-            <img src={park1} alt="" />
-          </GalleryCard>
-          <GalleryCard data-aos="zoom-in-up" data-aos-delay="100">
-            <img src={rb1} alt="" />
-          </GalleryCard>
-          <GalleryCard data-aos="zoom-in-up" data-aos-delay="100">
-            <img src={db2} alt="" />
-          </GalleryCard>
-          <GalleryCard data-aos="zoom-in-up" data-aos-delay="100">
-            <img src={db5} alt="" />
-          </GalleryCard>
+          {gallery && gallery.map((item) => {
+            return (
+              <>
+                {item.IsShowOnHomePage == false ? (
+                  <GalleryCard data-aos="zoom-in-right" data-aos-delay="50">
+                    <img src={item.Filepath} alt="" />
+                  </GalleryCard>
+                ) : null}
+              </>
+            );
+          })}
+          {/* <>
+            <GalleryCard data-aos="zoom-in-right" data-aos-delay="50">
+              <img src={db4} alt="" />
+            </GalleryCard>
+            <GalleryCard data-aos="zoom-in-up" data-aos-delay="50">
+              <img src={babar1} alt="" />
+            </GalleryCard>
+            <GalleryCard data-aos="fade-down" data-aos-delay="50">
+              <img src={babar2} alt="" />
+            </GalleryCard>
+            <GalleryCard data-aos="fade-down" data-aos-delay="50">
+              <img src={db1} alt="" />
+            </GalleryCard>
+            <GalleryCard data-aos="fade-down" data-aos-delay="50">
+              <img src={babar3} alt="" />
+            </GalleryCard>
+            <GalleryCard data-aos="fade-down" data-aos-delay="50">
+              <img src={db3} alt="" />
+            </GalleryCard>
+            <GalleryCard data-aos="fade-down" data-aos-delay="100">
+              <img src={vita1} alt="" />
+            </GalleryCard>
+            <GalleryCard data-aos="fade-down" data-aos-delay="100">
+              <img src={forest1} alt="" />
+            </GalleryCard>
+            <GalleryCard data-aos="fade-down" data-aos-delay="100">
+              <img src={park1} alt="" />
+            </GalleryCard>
+            <GalleryCard data-aos="zoom-in-up" data-aos-delay="100">
+              <img src={rb1} alt="" />
+            </GalleryCard>
+            <GalleryCard data-aos="zoom-in-up" data-aos-delay="100">
+              <img src={db2} alt="" />
+            </GalleryCard>
+            <GalleryCard data-aos="zoom-in-up" data-aos-delay="100">
+              <img src={db5} alt="" />
+            </GalleryCard>
+          </> */}
         </GalleryGrid>
       </GalleryContainer>
       <PageBreak></PageBreak>

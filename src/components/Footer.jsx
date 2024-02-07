@@ -90,10 +90,22 @@ const Footer = () => {
         <div className="flex-center">
           <p>
             © 2023
-            <a href="#" target="_blank" rel="noreferrer noopener">
+            <a
+              href="#"
+              className="fyxLink"
+              target="_blank"
+              rel="noreferrer noopener"
+            >
               FYX architects,
             </a>
-            All Rights Reserved
+            Design & Developed By{" "}
+            <a
+              href="https://nmskaar.com/"
+              target="_blank"
+              rel="noreferrer noopener"
+            >
+              Nmskaar Infotech
+            </a>
           </p>
         </div>
       </CopyFooter>
@@ -257,10 +269,12 @@ const CopyFooter = styled.div`
     font-family: "Roboto3", sans-serif;
     line-height: 25px;
     a {
-      color: #ccc;
+      color: #8e7861;
+      font-weight: 700;
+    }
+    .fyxLink {
       margin: 0px 5px;
     }
-
     @media only screen and (max-width: 991px) {
     }
   }

@@ -1,6 +1,6 @@
 import React from "react";
 import styled from "styled-components";
-import contactImg from "../assets/Images/contactBg.JPG";
+import contactImg from "../assets/Images/Sketch2.png";
 import Button from "./Button";
 
 const ContactCompo = () => {
