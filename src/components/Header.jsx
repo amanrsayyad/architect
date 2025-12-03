@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
 import styled from "styled-components";
 import logoWhite from "../assets/Images/logoSlider.png";
+import bgLogo from "../assets/Images/bgLogo.png";
 import { Link } from "react-router-dom";
 
 const Header = () => {
@@ -29,7 +30,7 @@ const Header = () => {
       <header className={classes}>
         <HeaderFlex>
           <div>
-            <img src={logoWhite} className="logo" alt="" />
+            <img src={bgLogo} className="logo" alt="" />
           </div>
           <ul>
             <li>
@@ -87,7 +88,7 @@ const HeaderFlex = styled.div`
 
   div {
     .logo {
-      width: 130px;
+      width: 120px;
       height: 60px;
     }
   }

@@ -1,17 +1,56 @@
-import React, { useEffect } from "react";
+import React, { useEffect, useState } from "react";
 import styled from "styled-components";
 import { PageHead, PageBreak } from "../utils/styles";
 import Map from "../components/Map";
 import HeaderPages from "../components/HeaderPages";
-import Button from "../components/Button";
+import { ButtonStyle, PopupContainer } from "../utils/styles";
+import { VscChromeClose } from "react-icons/vsc";
 
 const Contact = () => {
+  const [name, setName] = useState("");
+  const [email, setEmail] = useState("");
+  const [message, setMessage] = useState("");
+  const [show, setShow] = useState(false);
+  const [res, setRes] = useState();
+
+  const tokenName = JSON.parse(localStorage.getItem("TOKEN"));
+
+  const sendMail = () => {
+    fetch(
+      `https://admin.fyxarchitects.in/api/data/SendEnquiry?Name=${name}&Email=${email}&message=${message}`,
+      {
+        method: "PUT",
+      }
+    )
+      .then((response) => response.json())
+      .then((data) => {
+        console.log(data);
+        setRes(data.data.message);
+        setShow(true);
+        setName("");
+        setEmail("");
+        setMessage("");
+      });
+  };
+
   useEffect(() => {
     window.scrollTo(0, 0);
   }, []);
 
   return (
     <div>
+      {show ? (
+        <PopupContainer>
+          <div className="overlay"></div>
+          <div className="card">
+            <h2>{res}</h2>
+          </div>
+          <VscChromeClose
+            onClick={() => setShow(false)}
+            className="iconClose"
+          />
+        </PopupContainer>
+      ) : null}
       <HeaderPages active4="active" />
       <PageHead>
         <h2>Contact us</h2>
@@ -22,8 +61,18 @@ const Contact = () => {
           <h2>Contact Us</h2>
           <form>
             <div className="grid">
-              <input type="text" placeholder="Full name" />
-              <input type="text" placeholder="E-mail" />
+              <input
+                type="text"
+                placeholder="Full name"
+                value={name}
+                onChange={(e) => setName(e.target.value)}
+              />
+              <input
+                type="text"
+                placeholder="E-mail"
+                value={email}
+                onChange={(e) => setEmail(e.target.value)}
+              />
             </div>
             <textarea
               name=""
@@ -31,8 +80,10 @@ const Contact = () => {
               cols="30"
               rows="4"
               placeholder="Message"
+              value={message}
+              onChange={(e) => setMessage(e.target.value)}
             ></textarea>
-            <Button buttonName="send message" />
+            <ButtonStyle onClick={sendMail}>send message</ButtonStyle>
           </form>
         </ContactForm>
         <ContactInfo>
@@ -50,6 +101,11 @@ const Contact = () => {
               <li>
                 <a href="mailto:fyxarchitects@gmail.com">
                   fyxarchitects@gmail.com
+                </a>
+              </li>
+              <li>
+                <a href="mailto:studio@fyxarchitects.in">
+                  studio@fyxarchitects.in
                 </a>
               </li>
             </ul>

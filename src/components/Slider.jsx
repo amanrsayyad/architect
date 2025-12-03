@@ -1,170 +1,102 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
 import "swiper/css/pagination";
-import "swiper/css/autoplay";
-import "swiper/less";
-import "swiper/less/effect-fade";
-import { Pagination, EffectFade, Navigation, Autoplay } from "swiper/modules";
+import "swiper/css/effect-fade";
+import "swiper/css/navigation";
+import { EffectFade, Autoplay, Pagination, Navigation } from "swiper/modules";
 import styled from "styled-components";
-import Slider1 from "../assets/Images/Slider/Slider1.jpg";
-import Slider2 from "../assets/Images/Slider/Slider2.jpg";
-import Slider3 from "../assets/Images/Slider/Slider3.jpg";
-import Slider6 from "../assets/Images/Slider/Slider6.jpg";
-import Slider7 from "../assets/Images/Slider/Slider7.jpg";
-import Slider8 from "../assets/Images/Slider/Slider8.jpg";
-import Slider9 from "../assets/Images/Slider/Slider9.jpg";
 import { Link } from "react-router-dom";
 import { FaInstagram, FaFacebookF, AiOutlineYoutube } from "../utils/Icons";
+import OverlayCompo from "./Overlay";
 
 const Slider = () => {
+  const [data, setData] = useState();
+  const [loader, setLoader] = useState(false);
+
+  useEffect(() => {
+    setLoader(true);
+    fetch("https://www.fyxarchitects.in/api/data/GetSliderGallery")
+      .then((res) => {
+        return res.json();
+      })
+      .then((data) => {
+        setLoader(false);
+        setData(data.data);
+      });
+  }, []);
+
   return (
-    <SliderContainer>
-      <ul className="nav_list">
-        <li>
-          <Link to="/" className="active">
-            Home
-          </Link>
-        </li>
-        <li>
-          <Link to="/about">About Us</Link>
-        </li>
-        <li>
-          <Link to="/portfolio">Portfolio</Link>
-        </li>
-        <li>
-          <Link to="/contact">Contact Us</Link>
-        </li>
-      </ul>
-      <ul className="socail_list">
-        <li className="seprator-line">
-          <a href="https://www.instagram.com/fyxarchitects/" target="_blank">
-            <FaInstagram className="iconInsta" />
-          </a>
-        </li>
-        <li className="seprator-line">
-          <a href="https://www.facebook.com/FYXarchitects/" target="_blank">
-            <FaFacebookF className="iconFb" />
-          </a>
-        </li>
-        <li>
-          <a
-            href="https://www.youtube.com/channel/UCzlAk6ojMkPcwf1JgYBSm7A"
-            target="_blank"
-          >
-            <AiOutlineYoutube className="iconYt" />
-          </a>
-        </li>
-      </ul>
-      <Swiper
-        loop={true}
-        autoplay={{
-          delay: 2500,
-          disableOnInteraction: false,
-        }}
-        effect={"fade"}
-        pagination={{
-          dynamicBullets: true,
-        }}
-        navigation={true}
-        // EffectFade
-        modules={[Autoplay, EffectFade, Pagination, Navigation]}
-      >
-        <SwiperSlide className="embla__slide">
-          <img src={Slider7} alt="" />
-          <Data>
-            <h1>Architectural Excellence and Conceptual Sketches</h1>
-            <p>
-              Highlighting the architectural beauty and uniqueness. Sketches or
-              conceptual drawings that provide insight into the creative
-              process.
-            </p>
-          </Data>
-          <Overlay></Overlay>
-        </SwiperSlide>
-        <SwiperSlide className="embla__slide">
-          <img src={Slider1} alt="" />
-          <Data>
-            <h1>Architectural Innovation and Futuristic Designs</h1>
-            <p>
-              Futuristic and visionary approach to architecture. Parametric
-              design principles, displaying the adaptability and complexity
-              achievable through computational design.
-            </p>
-          </Data>
-          <Overlay></Overlay>
-        </SwiperSlide>
-        <SwiperSlide className="embla__slide">
-          <img src={Slider2} alt="" />
-          <Data>
-            <h1>Modern Design</h1>
-            <p>
-              Showcase buildings or interiors with clean lines and minimalistic
-              aesthetics, characteristic of modern design.
-            </p>
-          </Data>
-          <Overlay></Overlay>
-        </SwiperSlide>
-        <SwiperSlide className="embla__slide">
-          <img src={Slider3} alt="" />
-          <Data>
-            <h1>Innovative Solutions & Customized Solutions</h1>
-            <p>
-              Showcase projects where your firm has provided unique, tailor-made
-              solutions to meet specific client needs and challenges.
-            </p>
-          </Data>
-          <Overlay></Overlay>
-        </SwiperSlide>
-        <SwiperSlide className="embla__slide">
-          <img src={Slider6} alt="" />
-          <Data>
-            <h1>Architectural Excellence and Conceptual Sketches</h1>
-            <p>
-              Highlighting the architectural beauty and uniqueness. Sketches or
-              conceptual drawings that provide insight into the creative
-              process.
-            </p>
-          </Data>
-          <Overlay></Overlay>
-        </SwiperSlide>
-        <SwiperSlide className="embla__slide">
-          <img src={Slider7} alt="" />
-          <Data>
-            <h1>Architectural Innovation and Futuristic Designs</h1>
-            <p>
-              Futuristic and visionary approach to architecture. Parametric
-              design principles, displaying the adaptability and complexity
-              achievable through computational design.
-            </p>
-          </Data>
-          <Overlay></Overlay>
-        </SwiperSlide>
-        <SwiperSlide className="embla__slide">
-          <img src={Slider8} alt="" />
-          <Data>
-            <h1>Modern Design</h1>
-            <p>
-              Showcase buildings or interiors with clean lines and minimalistic
-              aesthetics, characteristic of modern design.
-            </p>
-          </Data>
-          <Overlay></Overlay>
-        </SwiperSlide>
-        <SwiperSlide className="embla__slide">
-          <img src={Slider9} alt="" />
-          <Data>
-            <h1>Innovative Solutions & Customized Solutions</h1>
-            <p>
-              Showcase projects where your firm has provided unique, tailor-made
-              solutions to meet specific client needs and challenges.
-            </p>
-          </Data>
-          <Overlay></Overlay>
-        </SwiperSlide>
-      </Swiper>
-      <div className="overlay"></div>
-    </SliderContainer>
+    <>
+      {loader && <OverlayCompo />}
+      <SliderContainer>
+        <ul className="nav_list">
+          <li>
+            <Link to="/" className="active">
+              Home
+            </Link>
+          </li>
+          <li>
+            <Link to="/about">About Us</Link>
+          </li>
+          <li>
+            <Link to="/portfolio">Portfolio</Link>
+          </li>
+          <li>
+            <Link to="/contact">Contact Us</Link>
+          </li>
+        </ul>
+        <ul className="socail_list">
+          <li className="seprator-line">
+            <a href="https://www.instagram.com/fyxarchitects/" target="_blank">
+              <FaInstagram className="iconInsta" />
+            </a>
+          </li>
+          <li className="seprator-line">
+            <a href="https://www.facebook.com/FYXarchitects/" target="_blank">
+              <FaFacebookF className="iconFb" />
+            </a>
+          </li>
+          <li>
+            <a
+              href="https://www.youtube.com/channel/UCzlAk6ojMkPcwf1JgYBSm7A"
+              target="_blank"
+            >
+              <AiOutlineYoutube className="iconYt" />
+            </a>
+          </li>
+        </ul>
+        <Swiper
+          spaceBetween={30}
+          effect={"fade"}
+          centeredSlides={true}
+          autoplay={{
+            delay: 3000,
+            disableOnInteraction: false,
+          }}
+          modules={[EffectFade, Autoplay]}
+        >
+          {data &&
+            data.map((item) => {
+              return (
+                <SwiperSlide className="embla__slide animeslide-slide">
+                  <img src={item.FilePath} alt="" />
+                  <Data>
+                    <h1 data-animate="bottom" className="animeslide-heading">
+                      {item.Heading}
+                    </h1>
+                    <p data-animate="bottom" class="animeslide-desc">
+                      {item.Subheading}
+                    </p>
+                  </Data>
+                  <Overlay></Overlay>
+                </SwiperSlide>
+              );
+            })}
+        </Swiper>
+        <div className="overlay"></div>
+      </SliderContainer>
+    </>
   );
 };
 
@@ -276,6 +208,87 @@ const SliderContainer = styled.div`
       left: 8%;
     }
   }
+
+  .slider1 {
+    h1 {
+      transition: all 1s ease;
+      -webkit-transform: translateY(-30px);
+      transform: translateY(0px);
+      opacity: 1;
+      animation: slider1 3s infinite;
+      animation-timing-function: ease-out;
+      animation-direction: alternate;
+    }
+    @keyframes slider1 {
+      0% {
+        transition: all 0.3s ease;
+        -webkit-transform: translateY(-30px);
+        transform: translateY(-40px);
+        opacity: 0;
+      }
+      100% {
+        ma-webkit-transform: translateX(0);
+        transform: translateX(0);
+        -webkit-transition-delay: 0.9s;
+        transition-delay: 0.9s;
+        opacity: 1;
+      }
+    }
+    p {
+      animation: para1 1s;
+      animation-timing-function: ease-out;
+      animation-direction: alternate;
+    }
+    @keyframes para1 {
+      0% {
+        transition: all 0.5s ease-in;
+        margin-left: 5rem;
+      }
+      100% {
+        margin-left: 0rem;
+      }
+    }
+  }
+  .slider2 {
+    h1 {
+      transition: all 1s ease;
+      -webkit-transform: translateY(-30px);
+      transform: translateY(0px);
+      opacity: 1;
+      animation: slider1 2s infinite;
+      animation-timing-function: ease-out;
+      animation-direction: alternate;
+    }
+    @keyframes slider1 {
+      0% {
+        transition: all 0.3s ease;
+        -webkit-transform: translateY(-30px);
+        transform: translateY(-40px);
+        opacity: 0;
+      }
+      100% {
+        ma-webkit-transform: translateX(0);
+        transform: translateX(0);
+        -webkit-transition-delay: 0.9s;
+        transition-delay: 0.9s;
+        opacity: 1;
+      }
+    }
+    p {
+      animation: para2 7s;
+      animation-timing-function: ease-out;
+      animation-direction: alternate;
+    }
+    @keyframes para2 {
+      0% {
+        transition: all 0.5s ease-in;
+        margin-left: 5rem;
+      }
+      100% {
+        margin-left: 0rem;
+      }
+    }
+  }
 `;
 
 const Data = styled.div`
@@ -300,18 +313,6 @@ const Data = styled.div`
     display: flex;
     align-items: center;
     justify-content: center;
-    animation: head 0.5s;
-    animation-timing-function: ease-out;
-    animation-direction: alternate;
-  }
-  @keyframes head {
-    0% {
-      transition: all 0.5s ease-in;
-      margin-left: 6rem;
-    }
-    100% {
-      margin-left: 0rem;
-    }
   }
   p {
     background-color: transparent;
@@ -322,18 +323,6 @@ const Data = styled.div`
     font-size: 19px;
     font-family: "Roboto3", sans-serif;
     line-height: 27px;
-    animation: para 1s;
-    animation-timing-function: ease-out;
-    animation-direction: alternate;
-  }
-  @keyframes para {
-    0% {
-      transition: all 0.5s ease-in;
-      margin-left: 5rem;
-    }
-    100% {
-      margin-left: 0rem;
-    }
   }
   @media only screen and (max-width: 991px) {
     h1 {

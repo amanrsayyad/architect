@@ -1,6 +1,5 @@
-import React, { useEffect } from "react";
-import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
-import axios from "axios";
+import React from "react";
+import { HashRouter as Router, Route, Routes } from "react-router-dom";
 import "./App.css";
 import Home from "./pages/Home";
 import Footer from "./components/Footer";
@@ -11,24 +10,12 @@ import About from "./pages/About";
 import ProjectDetail from "./pages/ProjectDetail";
 import Portfolio from "./pages/Portfolio";
 import Gallery from "./pages/Gallery";
+import Architecture from "./components/ProjectTypes/Architecture";
+import Interior from "./components/ProjectTypes/Interior";
+import Landscape from "./components/ProjectTypes/Landscape";
+import Visualisation from "./components/ProjectTypes/Visualisation";
 
 function App() {
-  const handleLogin = async () => {
-    try {
-      const response = await axios.post(
-        "http://admin.fyxarchitects.in/api/data/userlogin",
-        { username: "fyx", password: "jayhanuman" }
-      );
-      localStorage.setItem(
-        "TOKEN",
-        JSON.stringify(response.data.data.access_token)
-      );
-    } catch (error) {
-      console.error("Error creating post:", error);
-    }
-  };
-  handleLogin();
-
   return (
     <div>
       <Router>
@@ -38,7 +25,11 @@ function App() {
           <Route path="/contact" element={<Contact />} />
           <Route path="/portfolio" element={<Portfolio />} />
           <Route path="/projects" element={<Projects />} />
-          <Route path="/project-detail" element={<ProjectDetail />} />
+          <Route path="/architecture" element={<Architecture />} />
+          <Route path="/interior" element={<Interior />} />
+          <Route path="/landscape" element={<Landscape />} />
+          <Route path="/visualisation" element={<Visualisation />} />
+          <Route path="/project-detail/:id" element={<ProjectDetail />} />
           <Route path="/gallery" element={<Gallery />} />
         </Routes>
         <Footer />

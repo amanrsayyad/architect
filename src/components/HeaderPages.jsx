@@ -2,6 +2,7 @@ import React, { useState, useEffect } from "react";
 import styled from "styled-components";
 import logo from "../assets/Images/logo.png";
 import logoWhite from "../assets/Images/logoSlider.png";
+import bgLogo from "../assets/Images/bgLogo.png";
 import { Link } from "react-router-dom";
 import { TfiClose } from "../utils/Icons";
 import { FaInstagram, FaFacebookF, AiOutlineYoutube } from "../utils/Icons";
@@ -16,7 +17,7 @@ const HeaderPages = (props) => {
           <HeaderFlex>
             <div>
               <Link to="/">
-                <img src={logoWhite} className="logo" alt="" />
+                <img src={bgLogo} className="logo" alt="" />
               </Link>
             </div>
             <div className="nav-list">
@@ -191,7 +192,7 @@ const HeaderFlex = styled.div`
 
   div {
     .logo {
-      width: 130px;
+      width: 120px;
       height: 60px;
     }
   }

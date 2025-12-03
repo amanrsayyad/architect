@@ -6,151 +6,95 @@ const SliderTag = () => {
   return (
     <SliderContainer>
       <SliderTrack>
-        <Marquee direction="right" speed={200} delay={0}>
+        <Marquee direction="left" speed={20} delay={0}>
           <SliderDiv>
             <div className="tag">
               <span className="seperator"></span>
-              <h5>BUILDING SPACES FOR EVERY PURPOSE SINCE 2005</h5>
+              <h5>World is page for us… we’re the Designers…</h5>
               <span className="seperator"></span>
             </div>
             <div className="tag">
-              <h5>architecture & interior design</h5>
+              <h5>World is page for us… we’re the Designers…</h5>
               <span className="seperator"></span>
             </div>
             <div className="tag">
-              <h5>BUILDING SPACES FOR EVERY PURPOSE SINCE 2005</h5>
+              <h5>World is page for us… we’re the Designers…</h5>
               <span className="seperator"></span>
             </div>
             <div className="tag">
-              <h5>architecture & interior design</h5>
+              <h5>World is page for us… we’re the Designers…</h5>
               <span className="seperator"></span>
             </div>
             <div className="tag">
-              <h5>BUILDING SPACES FOR EVERY PURPOSE SINCE 2005</h5>
+              <h5>World is page for us… we’re the Designers…</h5>
               <span className="seperator"></span>
             </div>
             <div className="tag">
-              <h5>architecture & interior design</h5>
+              <h5>World is page for us… we’re the Designers…</h5>
               <span className="seperator"></span>
             </div>
             <div className="tag">
-              <h5>BUILDING SPACES FOR EVERY PURPOSE SINCE 2005</h5>
+              <h5>World is page for us… we’re the Designers…</h5>
               <span className="seperator"></span>
             </div>
             <div className="tag">
-              <h5>architecture & interior design</h5>
+              <h5>World is page for us… we’re the Designers…</h5>
               <span className="seperator"></span>
             </div>
             <div className="tag">
-              <h5>BUILDING SPACES FOR EVERY PURPOSE SINCE 2005</h5>
+              <h5>World is page for us… we’re the Designers…</h5>
               <span className="seperator"></span>
             </div>
             <div className="tag">
-              <h5>architecture & interior design</h5>
+              <h5>World is page for us… we’re the Designers…</h5>
               <span className="seperator"></span>
             </div>
             <div className="tag">
-              <h5>BUILDING SPACES FOR EVERY PURPOSE SINCE 2005</h5>
+              <h5>World is page for us… we’re the Designers…</h5>
               <span className="seperator"></span>
             </div>
             <div className="tag">
-              <h5>architecture & interior design</h5>
+              <h5>World is page for us… we’re the Designers…</h5>
               <span className="seperator"></span>
             </div>
             <div className="tag">
-              <h5>BUILDING SPACES FOR EVERY PURPOSE SINCE 2005</h5>
+              <h5>World is page for us… we’re the Designers…</h5>
               <span className="seperator"></span>
             </div>
             <div className="tag">
-              <h5>architecture & interior design</h5>
+              <h5>World is page for us… we’re the Designers…</h5>
               <span className="seperator"></span>
             </div>
             <div className="tag">
-              <h5>BUILDING SPACES FOR EVERY PURPOSE SINCE 2005</h5>
+              <h5>World is page for us… we’re the Designers…</h5>
               <span className="seperator"></span>
             </div>
             <div className="tag">
-              <h5>architecture & interior design</h5>
+              <h5>World is page for us… we’re the Designers…</h5>
               <span className="seperator"></span>
             </div>
             <div className="tag">
-              <h5>BUILDING SPACES FOR EVERY PURPOSE SINCE 2005</h5>
+              <h5>World is page for us… we’re the Designers…</h5>
               <span className="seperator"></span>
             </div>
             <div className="tag">
-              <h5>architecture & interior design</h5>
+              <h5>World is page for us… we’re the Designers…</h5>
               <span className="seperator"></span>
             </div>
             <div className="tag">
-              <h5>BUILDING SPACES FOR EVERY PURPOSE SINCE 2005</h5>
+              <h5>World is page for us… we’re the Designers…</h5>
               <span className="seperator"></span>
             </div>
             <div className="tag">
-              <h5>architecture & interior design</h5>
+              <h5>World is page for us… we’re the Designers…</h5>
               <span className="seperator"></span>
             </div>
             <div className="tag">
-              <h5>BUILDING SPACES FOR EVERY PURPOSE SINCE 2005</h5>
+              <h5>World is page for us… we’re the Designers…</h5>
               <span className="seperator"></span>
             </div>
             <div className="tag">
-              <h5>architecture & interior design</h5>
-              <span className="seperator"></span>
-            </div>
-            <div className="tag">
-              <h5>BUILDING SPACES FOR EVERY PURPOSE SINCE 2005</h5>
-              <span className="seperator"></span>
-            </div>
-            <div className="tag">
-              <h5>architecture & interior design</h5>
-              <span className="seperator"></span>
-            </div>
-            <div className="tag">
-              <h5>BUILDING SPACES FOR EVERY PURPOSE SINCE 2005</h5>
-              <span className="seperator"></span>
-            </div>
-            <div className="tag">
-              <h5>architecture & interior design</h5>
-              <span className="seperator"></span>
-            </div>
-            <div className="tag">
-              <h5>BUILDING SPACES FOR EVERY PURPOSE SINCE 2005</h5>
-              <span className="seperator"></span>
-            </div>
-            <div className="tag">
-              <h5>architecture & interior design</h5>
-              <span className="seperator"></span>
-            </div>
-            <div className="tag">
-              <h5>BUILDING SPACES FOR EVERY PURPOSE SINCE 2005</h5>
-              <span className="seperator"></span>
-            </div>
-            <div className="tag">
-              <h5>architecture & interior design</h5>
-              <span className="seperator"></span>
-            </div>
-            <div className="tag">
-              <h5>BUILDING SPACES FOR EVERY PURPOSE SINCE 2005</h5>
-              <span className="seperator"></span>
-            </div>
-            <div className="tag">
-              <h5>architecture & interior design</h5>
-              <span className="seperator"></span>
-            </div>
-            <div className="tag">
-              <h5>BUILDING SPACES FOR EVERY PURPOSE SINCE 2005</h5>
-              <span className="seperator"></span>
-            </div>
-            <div className="tag">
-              <h5>architecture & interior design</h5>
-              <span className="seperator"></span>
-            </div>
-            <div className="tag">
-              <h5>BUILDING SPACES FOR EVERY PURPOSE SINCE 2005</h5>
-              <span className="seperator"></span>
-            </div>
-            <div className="tag">
-              <h5>architecture & interior design</h5>
+              <h5>World is page for us… we’re the Designers…</h5>
               <span className="seperator"></span>
             </div>
           </SliderDiv>

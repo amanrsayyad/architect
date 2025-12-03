@@ -101,3 +101,113 @@ a {
   animation: 500ms ease-in-out 0s normal none 1 running fadeInDown;
   padding: 15px;
 } */
+
+.animeslide-slide {
+  position: relative;
+  background-size: cover;
+  overflow: hidden;
+}
+.animeslide-slide.swiper-slide-active [data-animate] {
+  opacity: 1;
+  transform: none;
+}
+.animeslide-slide.swiper-slide-active .animeslide-heading {
+  transition-delay: 0.6s;
+}
+.animeslide-slide.swiper-slide-active .animeslide-desc {
+  transition-delay: 1s;
+}
+.animeslide-heading {
+  margin-bottom: 25px;
+  transition-delay: 3s;
+}
+.animeslide-heading span {
+  font-size: 16px;
+  background-color: #f08723;
+  padding: 6px 12px 7px;
+  border-radius: 8px;
+  font-weight: normal;
+}
+.animeslide-desc {
+  border-radius: 8px;
+  background-color: #202238;
+  opacity: 0.9;
+}
+[data-animate] {
+  opacity: 0;
+  transition: all 0.8s ease-out;
+}
+[data-animate="bottom"] {
+  transform: translate3d(0, 15px, 0);
+}
+.animeslide-bottom {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  border-radius: 8px;
+  background-color: #202238;
+  max-width: 600px;
+  z-index: 1;
+  padding: 35px 35px;
+  right: 0;
+  font-size: 14px;
+}
+/* ARROWS TESTMONIAL */
+.slick-arrow.slick-next {
+  position: absolute;
+  top: 50%;
+  right: 5%;
+  background-color: transparent;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 30px;
+  width: 40px;
+  z-index: 1;
+}
+.slick-arrow.slick-prev {
+  position: absolute;
+  top: 50%;
+  left: 5%;
+  background-color: transparent;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 30px;
+  width: 40px;
+  z-index: 1;
+}
+.slick-prev::before,
+.slick-next::before {
+  display: none;
+}
+.arrows {
+  color: #8e7861;
+  font-size: 55px;
+  background-color: transparent;
+}
+@media only screen and (max-width: 991px) {
+  .slick-arrow.slick-next {
+    position: absolute;
+    top: 90%;
+    right: 35%;
+    background-color: #8e7861;
+    height: 45px;
+    width: 45px;
+    border-radius: 50%;
+  }
+  .slick-arrow.slick-prev {
+    position: absolute;
+    top: 90%;
+    left: 35%;
+    background-color: #8e7861;
+    height: 45px;
+    width: 45px;
+    border-radius: 50%;
+  }
+  .arrows {
+    color: #fff;
+    font-size: 20px;
+    background-color: transparent;
+  }
+}

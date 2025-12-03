@@ -11,11 +11,7 @@ const Gallery = () => {
   const tokenName = JSON.parse(localStorage.getItem("TOKEN"));
 
   useEffect(() => {
-    fetch("http://admin.fyxarchitects.in/api/data/GetWorkGalaryList", {
-      headers: {
-        Authorization: `bearer ${tokenName}`,
-      },
-    })
+    fetch("https://www.fyxarchitects.in/api/data/GetWorkGalaryList")
       .then((res) => {
         return res.json();
       })
@@ -32,17 +28,16 @@ const Gallery = () => {
       <HeaderPages />
       <GalleryContainer>
         <GalleryGrid>
-          {gallery && gallery.map((item) => {
-            return (
-              <>
-                {item.IsShowOnHomePage == false ? (
+          {gallery &&
+            gallery.map((item) => {
+              return (
+                <>
                   <GalleryCard data-aos="zoom-in-right" data-aos-delay="50">
                     <img src={item.Filepath} alt="" />
                   </GalleryCard>
-                ) : null}
-              </>
-            );
-          })}
+                </>
+              );
+            })}
           {/* <>
             <GalleryCard data-aos="zoom-in-right" data-aos-delay="50">
               <img src={db4} alt="" />

@@ -17,7 +17,7 @@ const ProjectImg = () => {
   const tokenName = JSON.parse(localStorage.getItem("TOKEN"));
 
   useEffect(() => {
-    fetch("http://admin.fyxarchitects.in/api/data/GetWorkGalaryList", {
+    fetch("https://www.fyxarchitects.in/api/data/GetWorkGalaryList", {
       headers: {
         Authorization: `bearer ${tokenName}`,
       },
@@ -40,17 +40,18 @@ const ProjectImg = () => {
       >
         {trueImg && (
           <ProjectGrid>
-            {gallery.map((item) => {
-              return (
-                <>
-                  {item.IsShowOnHomePage == true ? (
-                    <ProjectCard data-aos="zoom-in-right" data-aos-delay="50">
-                      <img src={item.Filepath} alt="" />
-                    </ProjectCard>
-                  ) : null}
-                </>
-              );
-            })}
+            {gallery &&
+              gallery.map((item) => {
+                return (
+                  <>
+                    {item.IsShowOnHomePage == true ? (
+                      <ProjectCard data-aos="zoom-in-right" data-aos-delay="50">
+                        <img src={item.Filepath} alt="" />
+                      </ProjectCard>
+                    ) : null}
+                  </>
+                );
+              })}
           </ProjectGrid>
         )}
         <Link to="/gallery">
@@ -90,6 +91,11 @@ const ProjectContainer = styled.div`
       font-size: 25px;
       margin-left: 0.5rem;
     }
+
+    @media only screen and (max-width: 991px) {
+      bottom: 4%;
+      right: 6%;
+    }
   }
 `;
 
@@ -101,20 +107,21 @@ const ProjectGrid = styled.div`
   overflow: hidden;
 
   @media only screen and (max-width: 991px) {
-    grid-template-columns: 1fr;
+    flex-direction: column;
+    padding-bottom: 155px;
   }
 `;
 
 const ProjectCard = styled.div`
   &:nth-child(1) {
     img {
-      width: 100%;
+      width: 400px;
       height: 550px;
       object-fit: cover;
       animation: img1 1.5s;
       animation-timing-function: ease-out;
       animation-direction: alternate;
-      margin-left: -20rem;
+      margin-left: -10rem;
     }
     @keyframes img1 {
       0% {
@@ -124,7 +131,7 @@ const ProjectCard = styled.div`
       }
       100% {
         height: 550px;
-        margin-left: -20rem;
+        margin-left: -10rem;
       }
     }
   }
@@ -132,13 +139,12 @@ const ProjectCard = styled.div`
   &:nth-child(2) {
     margin-left: 10px;
     img {
-      width: 100%;
+      width: 600px;
       height: 500px;
       object-fit: cover;
       animation: img2 1.5s;
       animation-timing-function: ease-out;
       animation-direction: alternate;
-      margin-left: -20rem;
     }
     @keyframes img2 {
       0% {
@@ -148,7 +154,6 @@ const ProjectCard = styled.div`
       }
       100% {
         height: 500px;
-        margin-left: -20rem;
       }
     }
   }
@@ -156,13 +161,12 @@ const ProjectCard = styled.div`
   &:nth-child(3) {
     margin-left: 10px;
     img {
-      width: 600px;
+      width: 500px;
       height: 450px;
       object-fit: cover;
       animation: img3 1.5s;
       animation-timing-function: ease-out;
       animation-direction: alternate;
-      margin-left: -20rem;
     }
     @keyframes img3 {
       0% {
@@ -172,7 +176,6 @@ const ProjectCard = styled.div`
       }
       100% {
         height: 450px;
-        margin-left: -20rem;
       }
     }
   }
@@ -180,7 +183,7 @@ const ProjectCard = styled.div`
   &:nth-child(4) {
     margin-left: 10px;
     img {
-      width: 450px;
+      width: 500px;
       height: 350px;
       object-fit: cover;
       animation: img4 1.5s;
@@ -203,6 +206,33 @@ const ProjectCard = styled.div`
   @media only screen and (max-width: 991px) {
     img {
       height: 350px;
+    }
+    &:nth-child(1) {
+      img {
+        margin-left: -0rem;
+        width: 100%;
+      }
+      @keyframes img1 {
+        0% {
+          transition: all 0.5s ease-in;
+          height: 300px;
+          margin-left: 0rem;
+        }
+        100% {
+          height: 550px;
+          margin-left: -0rem;
+        }
+      }
+    }
+    &:nth-child(1),
+    &:nth-child(2),
+    &:nth-child(3),
+    &:nth-child(4) {
+      margin-left: 0px;
+
+      img {
+        width: 100%;
+      }
     }
   }
 `;

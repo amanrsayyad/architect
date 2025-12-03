@@ -1,10 +1,37 @@
-import React, { useEffect } from "react";
+import React, { useEffect, useState } from "react";
+import { useParams } from "react-router-dom";
 import styled from "styled-components";
 import HeaderPages from "../components/HeaderPages";
 import { babar1, babar2, babar3 } from "../utils/Images";
 
 const ProjectDetail = () => {
+  const { id } = useParams();
+
+  const [data, setData] = useState();
+  const [gallery, setGallery] = useState();
+
+  const tokenName = JSON.parse(localStorage.getItem("TOKEN"));
+
   useEffect(() => {
+    fetch(
+      "https://www.fyxarchitects.in/api/data/GetProjectListByCategoryId?CategoryId=0"
+    )
+      .then((res) => {
+        return res.json();
+      })
+      .then((data) => {
+        setData(data.data);
+      });
+
+    fetch(
+      `https://www.fyxarchitects.in/api/data/GetProjectGalleryById?ProjectId=${id}`
+    )
+      .then((res) => {
+        return res.json();
+      })
+      .then((data) => {
+        setGallery(data.data);
+      });
     window.scrollTo(0, 0);
   }, []);
 
@@ -12,44 +39,60 @@ const ProjectDetail = () => {
     <>
       <HeaderPages active3="active" />
       <ProjectContainer>
-        <div className="header">
-          <p>Project - Babar Chowk, Satara</p>
-        </div>
-        <ProjectGrid>
-          <ProjectCard>
-            <img src={babar1} alt="" />
-            <img src={babar2} alt="" />
-            <img src={babar3} alt="" />
-          </ProjectCard>
-          <ProjectCard>
-            <div className="data">
-              <h2>Babar Chowk</h2>
-              <p>
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-                eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
-                enim ad minim veniam, quis nostrud exercitation ullamco laboris
-                nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor
-                in reprehenderit in voluptate velit esse cillum dolore eu fugiat
-                nulla pariatur. Excepteur sint occaecat cupidatat non proident,
-                sunt in culpa qui officia deserunt mollit anim id est laborum.
-              </p>
-              <ul>
-                <li>
-                  <h5>CLIENT :</h5>
-                  <p>Qode Interactive</p>
-                </li>
-                <li>
-                  <h5>AREA :</h5>
-                  <p>400 Sq.Ft</p>
-                </li>
-                <li>
-                  <h5>LOCATION :</h5>
-                  <p>Satara</p>
-                </li>
-              </ul>
-            </div>
-          </ProjectCard>
-        </ProjectGrid>
+        {data &&
+          data.map((item) => {
+            return (
+              <>
+                {item.ProjectId == id ? (
+                  <>
+                    <div className="header">
+                      <p>Project - {item.Name}</p>
+                    </div>
+                    <ProjectGrid>
+                      <ProjectCard>
+                        {item.Filepath === null ? null : (
+                          <img src={item.Filepath} alt="" />
+                        )}
+                        {item.HFilepath === null ? null : (
+                          <img src={item.HFilepath} alt="" />
+                        )}
+                      </ProjectCard>
+                      <ProjectCard>
+                        <div className="data">
+                          <h2>{item.Name}</h2>
+                          <p>{item.Description}</p>
+                          <ul>
+                            <li>
+                              <h5>CLIENT :</h5>
+                              <p>{item.Client}</p>
+                            </li>
+                            <li>
+                              <h5>AREA :</h5>
+                              <p>{item.Area}</p>
+                            </li>
+                            <li>
+                              <h5>LOCATION :</h5>
+                              <p>{item.Location}</p>
+                            </li>
+                          </ul>
+                        </div>
+                      </ProjectCard>
+                    </ProjectGrid>
+                  </>
+                ) : null}
+              </>
+            );
+          })}
+        <GalleryGrid>
+          {gallery &&
+            gallery.map((item) => {
+              return (
+                <GalleryCard>
+                  <img src={item.FolderPath} alt="" />
+                </GalleryCard>
+              );
+            })}
+        </GalleryGrid>
       </ProjectContainer>
     </>
   );
@@ -148,5 +191,26 @@ const ProjectCard = styled.div`
     img {
       height: 350px;
     }
+  }
+`;
+
+const GalleryGrid = styled.div`
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-gap: 1rem;
+  grid-row-gap: 1rem;
+  padding: 50px 50px;
+
+  @media only screen and (max-width: 991px) {
+    grid-template-columns: 1fr;
+  }
+`;
+
+const GalleryCard = styled.div`
+  img {
+    width: 100%;
+    height: 500px;
+    border-radius: 5px;
+    object-fit: cover;
   }
 `;

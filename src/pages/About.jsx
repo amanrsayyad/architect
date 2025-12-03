@@ -8,6 +8,7 @@ import Test from "../components/Test";
 import Counter from "../components/Counter";
 import HeaderPages from "../components/HeaderPages";
 import Vision from "../components/Vision";
+import Studio from "../components/Studio";
 
 const About = () => {
   
@@ -24,11 +25,12 @@ const About = () => {
       <PageBg>
         <img src={aboutImg} alt="" />
       </PageBg>
-      <Faq />
-      <Team />
-      <Test />
-      <Counter />
       <Vision />
+      {/* <Faq /> */}
+      <Team />
+      {/* <Test /> */}
+      <Counter />
+      <Studio />
       <PageBreak></PageBreak>
     </div>
   );

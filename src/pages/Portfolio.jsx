@@ -7,6 +7,8 @@ import Slider2 from "../assets/Images/Slider/Slider2.jpg";
 import Slider6 from "../assets/Images/Slider/Slider6.jpg";
 import Slider8 from "../assets/Images/Slider/Slider8.jpg";
 import Slider9 from "../assets/Images/Slider/Slider9.jpg";
+import Interior from "../assets/Images/interior.jpeg";
+import Landscape from "../assets/Images/landscape.jpeg";
 
 const Portfolio = () => {
   
@@ -21,7 +23,7 @@ const Portfolio = () => {
         <h2>Portfolio</h2>
       </ProjectHead>
       <PortfolioContainer>
-        <PortfolioCard to="/projects" className="border-right">
+        <PortfolioCard to="/architecture" className="border-right">
           <img src={Slider6} alt="" />
           <div className="text">
             Architecture
@@ -29,23 +31,23 @@ const Portfolio = () => {
           </div>
           <span className="number">01</span>
         </PortfolioCard>
-        <PortfolioCard to="/projects" className="border-right">
-          <img src={Slider2} alt="" />
+        <PortfolioCard to="/interior" className="border-right">
+          <img src={Interior} alt="" />
           <div className="text">
             Interior
             <HiArrowLongRight className="iconArrow" />
           </div>
           <span className="number">02</span>
         </PortfolioCard>
-        <PortfolioCard to="/projects" className="border-right">
-          <img src={Slider8} alt="" />
+        <PortfolioCard to="/landscape" className="border-right">
+          <img src={Landscape} alt="" />
           <div className="text">
             Landscape
             <HiArrowLongRight className="iconArrow" />
           </div>
           <span className="number">03</span>
         </PortfolioCard>
-        <PortfolioCard to="/projects" className="border-right">
+        <PortfolioCard to="/visualisation" className="border-right">
           <img src={Slider9} alt="" />
           <div className="text">
             Visualisation

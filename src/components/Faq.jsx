@@ -45,8 +45,7 @@ const Faq = () => {
                 that involves the conceptualization, planning, and realization
                 of physical structures. Architects are responsible for shaping
                 the built environment, and their designs influence the way
-                people interact with and experience spaces. Here's a description
-                of architecture design.
+                people interact with and experience spaces.
               </p>
             ) : null}
           </FaqDiv>

@@ -1,56 +1,47 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import styled from "styled-components";
 import { HiArrowLongRight } from "../utils/Icons";
 import { babar1, db1, forest1, vita1, rb1, park1 } from "../utils/Images";
 import { Link } from "react-router-dom";
 
 const Projects = () => {
+  const [data, setData] = useState();
+
+  const tokenName = JSON.parse(localStorage.getItem("TOKEN"));
+
+  useEffect(() => {
+    fetch(
+      "https://www.fyxarchitects.in/api/data/GetProjectListByCategoryId?CategoryId=0"
+    )
+      .then((res) => {
+        return res.json();
+      })
+      .then((data) => {
+        setData(data.data);
+      });
+
+    window.scrollTo(0, 0);
+  }, []);
+
   return (
     <ProjectContainer>
-      <ProjectCard to="/project-detail">
-        <img src={babar1} alt="" data-aos="fade-left" />
-        <div className="text">
-          Babar Chowk, Satara <HiArrowLongRight className="iconArrow" />
-        </div>
-        <span className="number">01</span>
-      </ProjectCard>
-      <ProjectCard to="/project-detail" className="border-right">
-        <img src={db1} alt="" data-aos="fade-left" />
-        <div className="text">
-          DB Residence, bawada, Indapur{" "}
-          <HiArrowLongRight className="iconArrow" />
-        </div>
-        <span className="number">02</span>
-      </ProjectCard>
-      <ProjectCard to="/project-detail">
-        <img src={forest1} alt="" />
-        <div className="text">
-          Forest Colony, Satara <HiArrowLongRight className="iconArrow" />
-        </div>
-        <span className="number">03</span>
-      </ProjectCard>
-      <ProjectCard to="/project-detail" className="border-right">
-        <img src={vita1} alt="" />
-        <div className="text">
-          Mai's Kitchen, Vita <HiArrowLongRight className="iconArrow" />
-        </div>
-        <span className="number">04</span>
-      </ProjectCard>
-      <ProjectCard to="/project-detail">
-        <img src={park1} alt="" />
-        <div className="text">
-          Nana-Nani Park, Satara <HiArrowLongRight className="iconArrow" />
-        </div>
-        <span className="number">05</span>
-      </ProjectCard>
-      <ProjectCard to="/project-detail" className="border-right">
-        <img src={rb1} alt="" />
-        <div className="text">
-          RB Residence, Kolewadi, Satara{" "}
-          <HiArrowLongRight className="iconArrow" />
-        </div>
-        <span className="number">06</span>
-      </ProjectCard>
+      {data &&
+        data.map((item) => {
+          return (
+            <>
+              {item.Isshowonhome === true ? (
+                <>
+                  <ProjectCard to={`/project-detail/${item.ProjectId}/`}>
+                    <img src={item.Filepath} alt="" data-aos="fade-left" />
+                    <div className="text">
+                      {item.Name} <HiArrowLongRight className="iconArrow" />
+                    </div>
+                  </ProjectCard>
+                </>
+              ) : null}
+            </>
+          );
+        })}
     </ProjectContainer>
   );
 };
@@ -74,6 +65,7 @@ const ProjectCard = styled(Link)`
   position: relative;
   border-bottom: 1px solid #302e2c;
   border-left: 1px solid #302e2c;
+  border-right: 1px solid #302e2c;
   padding: 110px;
   z-index: 100;
   overflow: hidden;

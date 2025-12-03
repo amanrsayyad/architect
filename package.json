@@ -8,10 +8,10 @@
     "@testing-library/user-event": "^13.5.0",
     "aos": "^2.3.4",
     "axios": "^1.6.7",
-    "bootstrap": "^5.3.2",
     "embla-carousel-autoplay": "^8.0.0-rc18",
     "embla-carousel-react": "^8.0.0-rc18",
     "framer-motion": "^11.0.3",
+    "gsap": "^3.12.5",
     "react": "^18.2.0",
     "react-bootstrap": "^2.10.0",
     "react-countup": "^6.5.0",
@@ -22,8 +22,10 @@
     "react-scripts": "5.0.1",
     "react-scroll-parallax": "^3.4.5",
     "react-scroll-trigger": "^0.6.14",
+    "react-slick": "^0.30.2",
+    "slick-carousel": "^1.8.1",
     "styled-components": "^6.1.2",
-    "swiper": "^11.0.5",
+    "swiper": "^11.1.1",
     "web-vitals": "^2.1.4"
   },
   "scripts": {

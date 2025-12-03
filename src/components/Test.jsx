@@ -1,38 +1,66 @@
-import React, { useState } from "react";
+import React, { useEffect, useRef, useState } from "react";
+import Slider from "react-slick";
+import "slick-carousel/slick/slick.css";
+import "slick-carousel/slick/slick-theme.css";
 import styled from "styled-components";
 import testBg from "../assets/Images/testBg.png";
 import { HiArrowLongRight, HiArrowLongLeft } from "../utils/Icons";
-import People from "../utils/Data";
 
 const Test = () => {
-  const [state, setState] = useState(0);
-  const { id, name, title, quote } = People[state];
+  const [data, setData] = useState();
 
-  const Next = () => {
-    setState((state + 1) % People.length);
+  useEffect(() => {
+    fetch("https://admin.fyxarchitects.in/api/data/GetAllTestimonial")
+      .then((res) => {
+        return res.json();
+      })
+      .then((data) => {
+        setData(data.data);
+      });
+  }, []);
+
+  const settings = {
+    dots: true,
+    fade: true,
+    autoplay: true,
+    infinite: true,
+    speed: 500,
+    autoplaySpeed: 5000,
+    slidesToShow: 1,
+    slidesToScroll: 1,
+    initialSlide: 0,
   };
-  const Prev = () => {
-    const newState = state - 1;
-    if (newState < 0) {
-      setState(People.length - 1);
-    } else {
-      setState(state - 1);
-    }
-  };
+
+  const slider = useRef(null);
 
   return (
     <TestContainer>
-      <TestBg></TestBg>
-      <HiArrowLongLeft className="iconLeft" onClick={Prev} />
-      <HiArrowLongRight className="iconRight" onClick={Next} />
-      <TestDiv key={id}>
-        <h5>"{quote}"</h5>
-        <p>
-          {name}
-        </p>
-        <p>{title}
-        </p>
-      </TestDiv>
+      <Slider ref={slider} {...settings}>
+        {data &&
+          data.map((item, index) => {
+            return (
+              <TestDiv>
+                <div className="data">
+                  <h5>"{item.Description}"</h5>
+                  <p>{item.Name}</p>
+                  <p>{item.Address}</p>
+                </div>
+              </TestDiv>
+            );
+          })}
+      </Slider>
+      <button
+        onClick={() => slider?.current?.slickNext()}
+        className="slick-arrow slick-next"
+      >
+        <HiArrowLongRight className="arrows" />
+      </button>
+      <button
+        onClick={() => slider?.current?.slickPrev()}
+        className="slick-arrow slick-prev"
+      >
+        <HiArrowLongLeft className="arrows" />
+      </button>
     </TestContainer>
   );
 };
@@ -49,60 +77,32 @@ const TestContainer = styled.div`
   -moz-user-select: none;
   -ms-user-select: none;
   user-select: none;
+  overflow: hidden;
 
-  .iconLeft {
-    position: absolute;
-    top: 45%;
-    left: 5%;
-    transform: translateY(-50%);
-    background-color: transparent;
-    color: #8e7861;
-    font-size: 40px;
-    cursor: pointer;
-  }
-  .iconRight {
-    position: absolute;
-    top: 45%;
-    right: 5%;
-    transform: translateY(-50%);
-    background-color: transparent;
-    color: #8e7861;
-    font-size: 40px;
-    cursor: pointer;
-  }
   @media only screen and (max-width: 991px) {
-    .iconLeft {
-      left: 5%;
-    }
-    .iconRight {
-      right: 5%;
-    }
+    height: 65vh;
   }
-`;
-
-const TestBg = styled.div`
-  height: 100%;
-  width: 100%;
-  background: url(${testBg});
-  background-color: transparent;
 `;
 
 const TestDiv = styled.div`
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  width: 80%;
-  height: 100%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-direction: column;
-  text-align: center;
+  width: 100%;
+  height: 50vh;
+  background: url(${testBg});
   background-color: transparent;
+  z-index: 10000000;
 
-  h5 {
+  .data {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    text-align: center;
+    margin: auto;
     width: 80%;
+    height: 100%;
+    background-color: transparent;
+  }
+  h5 {
     font-family: "Khand4", sans-serif;
     font-size: 25px;
     font-weight: 600;
@@ -112,21 +112,38 @@ const TestDiv = styled.div`
     color: #8e7861;
     background-color: transparent;
     margin-bottom: 1rem;
+    padding: 0px 100px;
   }
   p {
     background-color: transparent;
     color: #fff;
-    margin-bottom: 0.5rem !important;
+    margin-bottom: 0.5rem;
     font-weight: 400;
-    font-size: 16px !important;
+    font-size: 16px;
     font-family: "Roboto3", sans-serif;
     line-height: 27px;
   }
 
   @media only screen and (max-width: 991px) {
+    height: 65vh;
     h5 {
-      width: 85%;
-      font-size: 20px;
+      padding: 0px;
+      font-size: 18px;
+    }
+    p {
+      margin-bottom: 0.3rem;
+    }
+  }
+  @media only screen and (max-width: 360px) {
+    h5 {
+      padding: 0px;
+      font-size: 15px;
+    }
+  }
+  @media only screen and (max-width: 375px) {
+    h5 {
+      padding: 0px;
+      font-size: 15px;
     }
   }
 `;

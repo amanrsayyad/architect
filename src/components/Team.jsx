@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import styled from "styled-components";
 import { FaInstagram, FaFacebookF, AiOutlineYoutube } from "../utils/Icons";
 import teamBg from "../assets/Images/teamBg.jpg";
@@ -7,33 +7,37 @@ import team2 from "../assets/Images/team2.jpg";
 import team3 from "../assets/Images/team3.jpg";
 
 const Team = () => {
+  const [data, setData] = useState();
+
+  useEffect(() => {
+    fetch("https://www.fyxarchitects.in/api/data/GetAllTeam")
+      .then((res) => {
+        return res.json();
+      })
+      .then((data) => {
+        setData(data.data);
+      });
+  }, []);
+  
   return (
     <TeamContainer>
       <TeamGrid>
-        {/* <TeamBg>
-          <img src={teamBg} alt="" />
-        </TeamBg> */}
         <TeamCard>
-          <div className="card">
-            <img src={team1} alt="" />
-            <h5>Hrishikesh Bobade</h5>
-            <h6>CEO / B.Arch., MA Architectural Design (UK)</h6>
-            <p>
-              Being a founder and principal architect of the FYX architects, He
-              plays a pivotal role in shaping the build environment, combining
-              artistic vision with practical expertise. Having vision and
-              creativity for their designs to meet and exceed expectations while
-              looking at every opportunity where innovation can be promoted. His
-              architectural experience ranges from Residential, Commercial,
-              Landscape to Master planning. He shoulder the responsibility of
-              transforming ideas into tangible, harmonious spaces that enhance
-              the quality of life.
-            </p>
-          </div>
-          <div className="card">
+          {data &&
+            data.map((item) => {
+              return (
+                <div className="card">
+                  <img src={item.imagePath} alt="" />
+                  <h5>{item.title}</h5>
+                  <h6>{item.subtitle}</h6>
+                  <p>{item.description}</p>
+                </div>
+              );
+            })}
+          {/* <div className="card">
             <img src={team2} alt="" />
             <h5>Akshay Kalase</h5>
-            <h6>Urbanism and spatial planning</h6>
+            <h6>3D Visualizer / Draftsman</h6>
             <p>
               By integrating 3D visualization with traditional drafting
               techniques, he bridge the gap between conceptualization and
@@ -51,7 +55,7 @@ const Team = () => {
               create spaces that are both attractive and practical for people to
               use.
             </p>
-          </div>
+          </div> */}
         </TeamCard>
       </TeamGrid>
     </TeamContainer>
@@ -97,6 +101,7 @@ const TeamCard = styled.div`
       height: 550px;
       object-fit: cover;
       margin-bottom: 0.5rem;
+      border-radius: 7px;
     }
     h5 {
       color: #8e7861;

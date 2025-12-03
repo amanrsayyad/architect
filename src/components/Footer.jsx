@@ -5,6 +5,8 @@ import { Link } from "react-router-dom";
 import { FaInstagram, FaFacebookF, AiOutlineYoutube } from "../utils/Icons";
 
 const Footer = () => {
+  const currentYear = new Date().getFullYear();
+
   return (
     <FooterContainer>
       <FooterGrid>
@@ -68,16 +70,16 @@ const Footer = () => {
           <h5>Portfolio</h5>
           <ul>
             <li>
-              <Link to="/project-detail">Architecture</Link>
+              <Link to="/architecture">Architecture</Link>
             </li>
             <li>
-              <Link to="/project-detail">Interior</Link>
+              <Link to="/interior">Interior</Link>
             </li>
             <li>
-              <Link to="/project-detail">Landscape</Link>
+              <Link to="/landscape">Landscape</Link>
             </li>
             <li>
-              <Link to="/project-detail">Visualisation</Link>
+              <Link to="/visualisation">Visualisation</Link>
             </li>
           </ul>
         </FooterCard>
@@ -89,16 +91,16 @@ const Footer = () => {
         </div>
         <div className="flex-center">
           <p>
-            © 2023
+            © {currentYear}
             <a
               href="#"
               className="fyxLink"
               target="_blank"
               rel="noreferrer noopener"
             >
-              FYX architects,
+              FYX Architects,
             </a>
-            Design & Developed By{" "}
+            Design & Developed by{" "}
             <a
               href="https://nmskaar.com/"
               target="_blank"
