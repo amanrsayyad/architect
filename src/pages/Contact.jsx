@@ -110,6 +110,29 @@ const Contact = () => {
               </li>
             </ul>
           </div>
+          <div>
+            <h4>PUNE OFFICE</h4>
+            <ul>
+              <li>
+                <a href="#">
+                  Off.No: 7, Vighnahar Complex, BRT road Adarshnagar, Kiwale, Ravet.
+                </a>
+              </li>
+              <li>
+                <a href="tel:9006990019">+91 900 69 900 19</a>
+              </li>
+              <li>
+                <a href="mailto:fyxarchitects@gmail.com">
+                  fyxarchitects@gmail.com
+                </a>
+              </li>
+              <li>
+                <a href="mailto:studio@fyxarchitects.in">
+                  studio@fyxarchitects.in
+                </a>
+              </li>
+            </ul>
+          </div>
         </ContactInfo>
       </ContactGrid>
       <PageBreak></PageBreak>

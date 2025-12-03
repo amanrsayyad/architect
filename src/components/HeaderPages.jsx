@@ -126,7 +126,10 @@ const HeaderPages = (props) => {
           </ul>
           <ul className="contact-info">
             <li>
-              A: Off.No.5 Krishna Empire, Gorakhpur, Khed, NH-4, Satara.415001.
+              SATARA OFFICE: Off.No.5 Krishna Empire, Gorakhpur, Khed, NH-4, Satara.415001.
+            </li>
+            <li>
+              PUNE OFFICE: Off.No: 7, Vighnahar Complex, BRT road Adarshnagar, Kiwale, Ravet.
             </li>
             <li>
               <a href="mailto:fyxarchitects@gmail.com">
