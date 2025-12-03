@@ -16,7 +16,7 @@ const Slider = () => {
 
   useEffect(() => {
     setLoader(true);
-    fetch("https://www.fyxarchitects.in/api/data/GetSliderGallery")
+    fetch("https://admin.fyxarchitects.in/api/data/GetSliderGallery")
       .then((res) => {
         return res.json();
       })

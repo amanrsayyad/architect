@@ -16,7 +16,7 @@ const ContactCompo = () => {
 
   const sendMail = () => {
     fetch(
-      `https://www.fyxarchitects.in/api/data/SendEnquiry?Name=${name}&Email=${email}&message=${message}`,
+      `https://admin.fyxarchitects.in/api/data/SendEnquiry?Name=${name}&Email=${email}&message=${message}`,
       {
         method: "PUT",
       }

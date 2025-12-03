@@ -11,7 +11,7 @@ const Interior = () => {
 
   useEffect(() => {
     fetch(
-      "https://www.fyxarchitects.in/api/data/GetProjectListByCategoryId?CategoryId=2"
+      "https://admin.fyxarchitects.in/api/data/GetProjectListByCategoryId?CategoryId=2"
     )
       .then((res) => {
         return res.json();

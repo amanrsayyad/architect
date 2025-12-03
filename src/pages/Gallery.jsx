@@ -11,7 +11,7 @@ const Gallery = () => {
   const tokenName = JSON.parse(localStorage.getItem("TOKEN"));
 
   useEffect(() => {
-    fetch("https://www.fyxarchitects.in/api/data/GetWorkGalaryList")
+    fetch("https://admin.fyxarchitects.in/api/data/GetWorkGalaryList")
       .then((res) => {
         return res.json();
       })

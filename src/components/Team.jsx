@@ -10,7 +10,7 @@ const Team = () => {
   const [data, setData] = useState();
 
   useEffect(() => {
-    fetch("https://www.fyxarchitects.in/api/data/GetAllTeam")
+    fetch("https://admin.fyxarchitects.in/api/data/GetAllTeam")
       .then((res) => {
         return res.json();
       })

@@ -11,7 +11,7 @@ const Landscape = () => {
 
   useEffect(() => {
     fetch(
-      "https://www.fyxarchitects.in/api/data/GetProjectListByCategoryId?CategoryId=3"
+      "https://admin.fyxarchitects.in/api/data/GetProjectListByCategoryId?CategoryId=3"
     )
       .then((res) => {
         return res.json();

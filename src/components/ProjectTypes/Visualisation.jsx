@@ -11,7 +11,7 @@ const Visualisation = () => {
 
   useEffect(() => {
     fetch(
-      "https://www.fyxarchitects.in/api/data/GetProjectListByCategoryId?CategoryId=4"
+      "https://admin.fyxarchitects.in/api/data/GetProjectListByCategoryId?CategoryId=4"
     )
       .then((res) => {
         return res.json();

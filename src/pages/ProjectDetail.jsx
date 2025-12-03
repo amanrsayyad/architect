@@ -14,7 +14,7 @@ const ProjectDetail = () => {
 
   useEffect(() => {
     fetch(
-      "https://www.fyxarchitects.in/api/data/GetProjectListByCategoryId?CategoryId=0"
+      "https://admin.fyxarchitects.in/api/data/GetProjectListByCategoryId?CategoryId=0"
     )
       .then((res) => {
         return res.json();
@@ -24,7 +24,7 @@ const ProjectDetail = () => {
       });
 
     fetch(
-      `https://www.fyxarchitects.in/api/data/GetProjectGalleryById?ProjectId=${id}`
+      `https://admin.fyxarchitects.in/api/data/GetProjectGalleryById?ProjectId=${id}`
     )
       .then((res) => {
         return res.json();
